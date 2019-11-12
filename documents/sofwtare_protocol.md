@@ -6,6 +6,9 @@
 * Code documentation
 * Organization
 
+## Topics
+* Low-level programming must be done with fixed size data as defined in <inttypes.h>
+
 ## Library for sensors
 * Sensors must be represented by a struct in witch it's desirable data can be acessed directly.
 * Sensors must be handled as a pointer to the structure.
