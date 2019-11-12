@@ -1,11 +1,16 @@
-/*
- *	Biblioteca para manipulacao de vetor ordenado.
- *	A estrutura se consiste em um vetor cujas posicoes armazenam a quantidade de um numero no vetor.
- *	Por exemplo, se o vetor contem 47 repeticoes do numero 3 teremos vet[3] = 47.
- *	Versao em C
+/*! 
+ *	\file count_vector.h
+ *	\brief Library for manipulating an ordered vector of integers with fixed interval
  *
- *	Feito por: Rafael Pastre
- *	Criado em: 08 nov 2019
+ *	This library implements a count vector which is a vector based on the count sort algorithm.
+ *
+ *	The structure defined in this library consists in a vector whose positions stores the number of
+ *	repetitions of the number in the vector. For instance, if a vector v have 47 repetitions of the
+ *	number 3 then we have v[3] = 47.
+ *
+ *	Made by: Rafael Pastre
+ *
+ *	Created in: 08 nov 2019
  */
 
 #ifndef LIB_COUNT_VECTOR_H

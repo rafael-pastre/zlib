@@ -1,0 +1,29 @@
+\hypertarget{zstm32_8h}{}\doxysection{stm32/zstm32.h File Reference}
+\label{zstm32_8h}\index{stm32/zstm32.h@{stm32/zstm32.h}}
+{\ttfamily \#include \char`\"{}stm32l4xx\+\_\+hal.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{zstm32_8h_ad4bf4ded461b787eab82cdef29b83b45}{R\+E\+T\+U\+R\+N\+\_\+\+O\+N\+\_\+\+E\+R\+R\+OR}}(status)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{zstm32_8h_ad4bf4ded461b787eab82cdef29b83b45}\label{zstm32_8h_ad4bf4ded461b787eab82cdef29b83b45}} 
+\index{zstm32.h@{zstm32.h}!RETURN\_ON\_ERROR@{RETURN\_ON\_ERROR}}
+\index{RETURN\_ON\_ERROR@{RETURN\_ON\_ERROR}!zstm32.h@{zstm32.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_ON\_ERROR}{RETURN\_ON\_ERROR}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+O\+N\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{status }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{    if(status != HAL\_OK)\{\(\backslash\)}
+\DoxyCodeLine{        return status;\(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line 14 of file zstm32.\+h.
+

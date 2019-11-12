@@ -1,0 +1,75 @@
+\hypertarget{zdebug_8c}{}\doxysection{standard/zdebug.c File Reference}
+\label{zdebug_8c}\index{standard/zdebug.c@{standard/zdebug.c}}
+{\ttfamily \#include \char`\"{}zdebug.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{zdebug_8c_ac80a3592e72fd96b772ee47a7d8e0d0a}{D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{zdebug_8c_acc004d5b6ee9e8ecb279b41285914b43}{dprintf}} (int tag, const char $\ast$format\+\_\+str,...)
+\item 
+int \mbox{\hyperlink{zdebug_8c_ad05f15acbd6fb4763048e6974e83b8bb}{debug\+\_\+ascii\+\_\+file}} (int tag, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{zdebug_8c_ac21a476e49032528de23bb7d17486cb0}{exit\+\_\+if\+\_\+null}} (void $\ast$p)
+\item 
+void \mbox{\hyperlink{zdebug_8c_a5450a0f07cb3505a1eb52c349229c1cc}{mexit\+\_\+file\+\_\+not\+\_\+opened}} (void $\ast$p, const char $\ast$error\+\_\+message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{zdebug_8c_ac80a3592e72fd96b772ee47a7d8e0d0a}\label{zdebug_8c_ac80a3592e72fd96b772ee47a7d8e0d0a}} 
+\index{zdebug.c@{zdebug.c}!DEBUG\_MODE@{DEBUG\_MODE}}
+\index{DEBUG\_MODE@{DEBUG\_MODE}!zdebug.c@{zdebug.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MODE}{DEBUG\_MODE}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}
+
+
+
+Definition at line 2 of file zdebug.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{zdebug_8c_ad05f15acbd6fb4763048e6974e83b8bb}\label{zdebug_8c_ad05f15acbd6fb4763048e6974e83b8bb}} 
+\index{zdebug.c@{zdebug.c}!debug\_ascii\_file@{debug\_ascii\_file}}
+\index{debug\_ascii\_file@{debug\_ascii\_file}!zdebug.c@{zdebug.c}}
+\doxysubsubsection{\texorpdfstring{debug\_ascii\_file()}{debug\_ascii\_file()}}
+{\footnotesize\ttfamily int debug\+\_\+ascii\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{tag,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file zdebug.\+c.
+
+\mbox{\Hypertarget{zdebug_8c_acc004d5b6ee9e8ecb279b41285914b43}\label{zdebug_8c_acc004d5b6ee9e8ecb279b41285914b43}} 
+\index{zdebug.c@{zdebug.c}!dprintf@{dprintf}}
+\index{dprintf@{dprintf}!zdebug.c@{zdebug.c}}
+\doxysubsubsection{\texorpdfstring{dprintf()}{dprintf()}}
+{\footnotesize\ttfamily int dprintf (\begin{DoxyParamCaption}\item[{int}]{tag,  }\item[{const char $\ast$}]{format\+\_\+str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file zdebug.\+c.
+
+\mbox{\Hypertarget{zdebug_8c_ac21a476e49032528de23bb7d17486cb0}\label{zdebug_8c_ac21a476e49032528de23bb7d17486cb0}} 
+\index{zdebug.c@{zdebug.c}!exit\_if\_null@{exit\_if\_null}}
+\index{exit\_if\_null@{exit\_if\_null}!zdebug.c@{zdebug.c}}
+\doxysubsubsection{\texorpdfstring{exit\_if\_null()}{exit\_if\_null()}}
+{\footnotesize\ttfamily void exit\+\_\+if\+\_\+null (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file zdebug.\+c.
+
+\mbox{\Hypertarget{zdebug_8c_a5450a0f07cb3505a1eb52c349229c1cc}\label{zdebug_8c_a5450a0f07cb3505a1eb52c349229c1cc}} 
+\index{zdebug.c@{zdebug.c}!mexit\_file\_not\_opened@{mexit\_file\_not\_opened}}
+\index{mexit\_file\_not\_opened@{mexit\_file\_not\_opened}!zdebug.c@{zdebug.c}}
+\doxysubsubsection{\texorpdfstring{mexit\_file\_not\_opened()}{mexit\_file\_not\_opened()}}
+{\footnotesize\ttfamily void mexit\+\_\+file\+\_\+not\+\_\+opened (\begin{DoxyParamCaption}\item[{void $\ast$}]{p,  }\item[{const char $\ast$}]{error\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file zdebug.\+c.
+

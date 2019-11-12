@@ -1,0 +1,161 @@
+\hypertarget{auto__identer_8c}{}\doxysection{utilities/auto\+\_\+identer/auto\+\_\+identer.c File Reference}
+\label{auto__identer_8c}\index{utilities/auto\_identer/auto\_identer.c@{utilities/auto\_identer/auto\_identer.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{auto__identer_8c_a38a196d020f78f178a33927d741a03f2}{S\+T\+R\+\_\+\+S\+I\+ZE}}~50
+\item 
+\#define \mbox{\hyperlink{auto__identer_8c_aba889888734a8b272a51d444d70ad2fa}{L\+I\+N\+E\+\_\+\+S\+I\+ZE}}~500
+\item 
+\#define \mbox{\hyperlink{auto__identer_8c_a564a94e97ac7ed8acc0c96afcf952d1f}{H\+E\+L\+P\+\_\+\+S\+TR}}~\char`\"{}help\char`\"{}
+\item 
+\#define \mbox{\hyperlink{auto__identer_8c_aa07d78d8e3af4601032fa00d6f5e78fb}{O\+U\+T\+\_\+\+P\+R\+E\+F\+IX}}~\char`\"{}idented\+\_\+\char`\"{}
+\item 
+\#define \mbox{\hyperlink{auto__identer_8c_a975d13d25888550dcf4f69e5a6105cca}{I\+N\+\_\+\+E\+R\+R\+OR}}~\char`\"{}Could not open input file.\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{auto__identer_8c_abf5dba03b3d5e29cdfde738823db3458}{O\+U\+T\+\_\+\+E\+R\+R\+OR}}~\char`\"{}Could not create output file.\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{auto__identer_8c_af3eac3ad203ab091baad010ef3f7ab0a}{clrscr}} ()
+\item 
+void \mbox{\hyperlink{auto__identer_8c_a20f91c866557ae6af943885b0a466f91}{display\+\_\+title}} ()
+\item 
+void \mbox{\hyperlink{auto__identer_8c_a9648fa3b31a29705a90f76c98d3f209c}{display\+\_\+help\+\_\+menu}} ()
+\item 
+void \mbox{\hyperlink{auto__identer_8c_a7062e434761a9ce5e1278f3babae64dc}{fprinttabs}} (F\+I\+LE $\ast$fp, int n)
+\item 
+char $\ast$ \mbox{\hyperlink{auto__identer_8c_a647a68bca9cb26512658500174fdf6fd}{first\+\_\+digit}} (char $\ast$str)
+\item 
+int \mbox{\hyperlink{auto__identer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{auto__identer_8c_a564a94e97ac7ed8acc0c96afcf952d1f}\label{auto__identer_8c_a564a94e97ac7ed8acc0c96afcf952d1f}} 
+\index{auto\_identer.c@{auto\_identer.c}!HELP\_STR@{HELP\_STR}}
+\index{HELP\_STR@{HELP\_STR}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{HELP\_STR}{HELP\_STR}}
+{\footnotesize\ttfamily \#define H\+E\+L\+P\+\_\+\+S\+TR~\char`\"{}help\char`\"{}}
+
+
+
+Definition at line 7 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_a975d13d25888550dcf4f69e5a6105cca}\label{auto__identer_8c_a975d13d25888550dcf4f69e5a6105cca}} 
+\index{auto\_identer.c@{auto\_identer.c}!IN\_ERROR@{IN\_ERROR}}
+\index{IN\_ERROR@{IN\_ERROR}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{IN\_ERROR}{IN\_ERROR}}
+{\footnotesize\ttfamily \#define I\+N\+\_\+\+E\+R\+R\+OR~\char`\"{}Could not open input file.\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 10 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_aba889888734a8b272a51d444d70ad2fa}\label{auto__identer_8c_aba889888734a8b272a51d444d70ad2fa}} 
+\index{auto\_identer.c@{auto\_identer.c}!LINE\_SIZE@{LINE\_SIZE}}
+\index{LINE\_SIZE@{LINE\_SIZE}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{LINE\_SIZE}{LINE\_SIZE}}
+{\footnotesize\ttfamily \#define L\+I\+N\+E\+\_\+\+S\+I\+ZE~500}
+
+
+
+Definition at line 6 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_abf5dba03b3d5e29cdfde738823db3458}\label{auto__identer_8c_abf5dba03b3d5e29cdfde738823db3458}} 
+\index{auto\_identer.c@{auto\_identer.c}!OUT\_ERROR@{OUT\_ERROR}}
+\index{OUT\_ERROR@{OUT\_ERROR}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{OUT\_ERROR}{OUT\_ERROR}}
+{\footnotesize\ttfamily \#define O\+U\+T\+\_\+\+E\+R\+R\+OR~\char`\"{}Could not create output file.\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 11 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_aa07d78d8e3af4601032fa00d6f5e78fb}\label{auto__identer_8c_aa07d78d8e3af4601032fa00d6f5e78fb}} 
+\index{auto\_identer.c@{auto\_identer.c}!OUT\_PREFIX@{OUT\_PREFIX}}
+\index{OUT\_PREFIX@{OUT\_PREFIX}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{OUT\_PREFIX}{OUT\_PREFIX}}
+{\footnotesize\ttfamily \#define O\+U\+T\+\_\+\+P\+R\+E\+F\+IX~\char`\"{}idented\+\_\+\char`\"{}}
+
+
+
+Definition at line 8 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_a38a196d020f78f178a33927d741a03f2}\label{auto__identer_8c_a38a196d020f78f178a33927d741a03f2}} 
+\index{auto\_identer.c@{auto\_identer.c}!STR\_SIZE@{STR\_SIZE}}
+\index{STR\_SIZE@{STR\_SIZE}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{STR\_SIZE}{STR\_SIZE}}
+{\footnotesize\ttfamily \#define S\+T\+R\+\_\+\+S\+I\+ZE~50}
+
+
+
+Definition at line 5 of file auto\+\_\+identer.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{auto__identer_8c_af3eac3ad203ab091baad010ef3f7ab0a}\label{auto__identer_8c_af3eac3ad203ab091baad010ef3f7ab0a}} 
+\index{auto\_identer.c@{auto\_identer.c}!clrscr@{clrscr}}
+\index{clrscr@{clrscr}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{clrscr()}{clrscr()}}
+{\footnotesize\ttfamily void clrscr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_a9648fa3b31a29705a90f76c98d3f209c}\label{auto__identer_8c_a9648fa3b31a29705a90f76c98d3f209c}} 
+\index{auto\_identer.c@{auto\_identer.c}!display\_help\_menu@{display\_help\_menu}}
+\index{display\_help\_menu@{display\_help\_menu}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{display\_help\_menu()}{display\_help\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+help\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_a20f91c866557ae6af943885b0a466f91}\label{auto__identer_8c_a20f91c866557ae6af943885b0a466f91}} 
+\index{auto\_identer.c@{auto\_identer.c}!display\_title@{display\_title}}
+\index{display\_title@{display\_title}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{display\_title()}{display\_title()}}
+{\footnotesize\ttfamily void display\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_a647a68bca9cb26512658500174fdf6fd}\label{auto__identer_8c_a647a68bca9cb26512658500174fdf6fd}} 
+\index{auto\_identer.c@{auto\_identer.c}!first\_digit@{first\_digit}}
+\index{first\_digit@{first\_digit}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{first\_digit()}{first\_digit()}}
+{\footnotesize\ttfamily char $\ast$ first\+\_\+digit (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_a7062e434761a9ce5e1278f3babae64dc}\label{auto__identer_8c_a7062e434761a9ce5e1278f3babae64dc}} 
+\index{auto\_identer.c@{auto\_identer.c}!fprinttabs@{fprinttabs}}
+\index{fprinttabs@{fprinttabs}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{fprinttabs()}{fprinttabs()}}
+{\footnotesize\ttfamily void fprinttabs (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file auto\+\_\+identer.\+c.
+
+\mbox{\Hypertarget{auto__identer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{auto__identer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{auto\_identer.c@{auto\_identer.c}!main@{main}}
+\index{main@{main}!auto\_identer.c@{auto\_identer.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file auto\+\_\+identer.\+c.
+

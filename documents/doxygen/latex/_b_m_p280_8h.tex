@@ -1,0 +1,1061 @@
+\hypertarget{_b_m_p280_8h}{}\doxysection{stm32/\+B\+M\+P280.h File Reference}
+\label{_b_m_p280_8h}\index{stm32/BMP280.h@{stm32/BMP280.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}zstdtypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}z\+I2\+C.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__bmp280__cal__data}{\+\_\+bmp280\+\_\+cal\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{struct__bmp280}{\+\_\+bmp280}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}}~100
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aa58a90f8c2ec9ac45d8b345f91fdfab1}{B\+M\+P280\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}}~0x\+EC
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a37f071326f27f31400e13cc00ff3faa4}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+ID}}~0x\+D0
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a32455aa8a6c26667ef99d73fc02b662b}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+ET}}~0x\+E0
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a51471f4c3ee565c77fdcca39802cc197}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+US}}~0x\+F3
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a72ad9efb996305f741d5ac90bd974454}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+T\+R\+OL}}~0x\+F4
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a45694d6e3967184999c884d88a76178e}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+IG}}~0x\+F5
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_afa572b770b46ca3553cf4ed2de98d7f4}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+S\+\_\+\+M\+SB}}~0x\+F7
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ac703068787eaa09f9dab28448412cfab}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+S\+\_\+\+L\+SB}}~0x\+F8
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aeaaf4fef06ddf4bea3d4181a450bccf9}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+S\+\_\+\+X\+L\+SB}}~0x\+F9
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a2cd2723c469cf7c1dfcdbd953593c474}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+M\+SB}}~0x\+FA
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a946474615d59dfab906fd7a7613e9b35}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+L\+SB}}~0x\+FB
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a887f1b7dab20ccebe9b1c451f15d3c86}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+X\+L\+SB}}~0x\+FC
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a8d52c46a37eedb208df71ebd1bc816bf}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T1\+\_\+\+L\+SB}}~0x88
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a3b3d701ee8830e1e9bc290a490e04f90}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T1\+\_\+\+M\+SB}}~0x89
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aeb25b4154d963075f3bcb793179d12f2}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T2\+\_\+\+L\+SB}}~0x8A
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ac5a76b7b8674f82a6d65e6089cfdab27}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T2\+\_\+\+M\+SB}}~0x8B
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ae5744874b7d53d495b3433225c692109}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T3\+\_\+\+L\+SB}}~0x8C
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a2035b58466bf138549e38178402fb19e}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T3\+\_\+\+M\+SB}}~0x8D
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aa04b41ba8bbe706ee3b8263518d10efb}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P1\+\_\+\+L\+SB}}~0x8E
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a9532ceee65d954f3b132d40e4a63e82e}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P1\+\_\+\+M\+SB}}~0x8F
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a3e24d85748931e4bcfb08667fe5daee5}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P2\+\_\+\+L\+SB}}~0x90
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a36e1ceb9349773bd8b51c8f8831a1eac}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P2\+\_\+\+M\+SB}}~0x91
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a4670550b4e466d3f790ae3de41549399}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P3\+\_\+\+L\+SB}}~0x92
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a93b4193427d383f65c3c54f909d90a8b}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P3\+\_\+\+M\+SB}}~0x93
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aa3b657dc183f917705b7da5d8af6e492}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P4\+\_\+\+L\+SB}}~0x94
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a6c900906eb97ad6480e702e8ad81bd62}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P4\+\_\+\+M\+SB}}~0x95
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a584f4a505a4226b8036aef5ab1177e88}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P5\+\_\+\+L\+SB}}~0x96
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aa7320182bdf3c73da18b330c5f5d47fb}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P5\+\_\+\+M\+SB}}~0x97
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a028732c9499cb7962ce5856219f8d980}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P6\+\_\+\+L\+SB}}~0x98
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a26ddb74f66494a4d45cade9712c34d1b}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P6\+\_\+\+M\+SB}}~0x99
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a6d51464702bea541d2742fefe4a58088}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P7\+\_\+\+L\+SB}}~0x9A
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a2955b2137560cabb4c30b1567b746db0}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P7\+\_\+\+M\+SB}}~0x9B
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a3d44aa93b1c8c29320bab0527cbb93f3}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P8\+\_\+\+L\+SB}}~0x9C
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a9e6b76089c4a0f07d0ed7359a7ed8121}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P8\+\_\+\+M\+SB}}~0x9D
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a1b7388cfdb6c0165a9fc87e5a7e3c3c8}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P9\+\_\+\+L\+SB}}~0x9E
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a67b394e7334c885d33ba862dc82d7f56}{B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P9\+\_\+\+M\+SB}}~0x9F
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a9847f7761f50ef7d6c518c5cb79f1333}{B\+M\+P280\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+ID}}~0x58
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a37118440f3eae833c1d99f5400d3f80e}{B\+M\+P280\+\_\+\+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE}}~0x\+B6
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a5c988c599f3e498f853ef7f7e8e78ae4}{B\+M\+P280\+\_\+\+M\+E\+A\+S\+U\+R\+I\+N\+G\+\_\+\+M\+A\+SK}}~0x0F
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aeaee10f3775b8e1fc9bbf6f11e070362}{B\+M\+P280\+\_\+\+S\+D\+O\+\_\+\+ON}}~0x02
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a85deb2679e4895764c420db149d5da1d}{B\+M\+P280\+\_\+\+S\+D\+O\+\_\+\+O\+FF}}~0x00
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_afe914c413d53e0e52ca1df11c9beda9c}{B\+M\+P280\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK}}~0x\+FC
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a7250f5095499e8f2ea850e785b69c083}{B\+M\+P280\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE}}~0x00
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ac8bf60935bb1223191290b73f046dc72}{B\+M\+P280\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+M\+O\+DE}}~0x01
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ab02b05fc4b72013ebe1f16dc7a7266a7}{B\+M\+P280\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+M\+O\+DE}}~0x03
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a0d0207c94112ec6b382584b0755481bd}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+\+M\+A\+SK}}~0x1F
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a627e885aa92803ad8e30f46291f44c85}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+0d5}}~0x00
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a4b87a746864149a65d6281e0a5b5d38f}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+62d5}}~0x01
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ac5df7480d006f693f4c795535936fe26}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+125}}~0x02
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a944c7a1d36cf5882a5961f73d6ea9c0d}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+250}}~0x03
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a3746b4dfc2f141ad525840f96edd3bb1}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+500}}~0x04
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ab90b6163927fa63378062970a3a12e89}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+1000}}~0x05
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aecb205fc3195ce16421e8fac245ed52e}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+2000}}~0x06
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_af906c41cc044dffd22226091f23e5a52}{B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+4000}}~0x07
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_abb506c91d3561f7c3e8123102b223726}{B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+M\+A\+SK}}~0x\+E3
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a788525a760c9cba4df301185908eca97}{B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+O\+FF}}~0x00
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a197c6c650b06a90ab731450df705ca4f}{B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+2}}~0x01
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_aaf383eb2e0fa52e4a50407ce3652f81a}{B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+4}}~0x02
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a021113292cadbd650969884d2d2fdc49}{B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+8}}~0x03
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ad36264110a987b313776d16c48644333}{B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+16}}~0x04
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ae99f976009f2bd39985e6f787f818c98}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+\+P\+\_\+\+M\+A\+SK}}~0x\+E3
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a2e88bd19a6cbdec7f2f804b96c267023}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+\+T\+\_\+\+M\+A\+SK}}~0x1F
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ac0facc0682246849c582ee6dbd759b95}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+\+S\+K\+I\+P\+P\+ED}}~0x00
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_afb3be5fd52228c20a8c2e6d3653d48d5}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+1}}~0x01
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a5117a4b3a8effb38be24d780a4a85d72}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+2}}~0x02
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_a409a55a11a04e8b4577213a768167f7a}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+4}}~0x03
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ab93e38d470faf4a82002017438711224}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+8}}~0x04
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8h_ad7af69f89297d23319e4f279d6541fbf}{B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+16}}~0x05
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__bmp280__cal__data}{\+\_\+bmp280\+\_\+cal\+\_\+data}} \mbox{\hyperlink{_b_m_p280_8h_a4848876fe81229a1c43c1d2ba6d9b885}{B\+M\+P280\+\_\+cal\+\_\+data}}
+\item 
+typedef struct \mbox{\hyperlink{struct__bmp280}{\+\_\+bmp280}} \mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}}
+\item 
+typedef enum \mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444}{\+\_\+bmp280\+\_\+oss\+\_\+modes}} \mbox{\hyperlink{_b_m_p280_8h_a433efb3e27b9cace9198e75f0b527bde}{B\+M\+P280\+\_\+oss\+\_\+modes\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444}{\+\_\+bmp280\+\_\+oss\+\_\+modes}} \{ \newline
+\mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a6a50cca0b746eeb0f20a8da18e6674c9}{O\+S\+S\+\_\+\+U\+L\+OW}}, 
+\mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a34f10435b27a9cde1c50cf0e69828ac4}{O\+S\+S\+\_\+\+L\+OW}}, 
+\mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444addc74f7b0d988c2ebb535b166611d27f}{O\+S\+S\+\_\+\+S\+TD}}, 
+\mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a7ba52b782a7ea008479dca3fa09935da}{O\+S\+S\+\_\+\+H\+I\+GH}}, 
+\newline
+\mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444ad698beedd2887b70f4769c12ccfc16e5}{O\+S\+S\+\_\+\+U\+H\+I\+GH}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a329d6d3649ef8d33476a3da29d449c79}{B\+M\+P280\+\_\+init}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, I2\+C\+\_\+\+Handle\+Type\+Def i2c\+\_\+bus, uint8\+\_\+t sensor\+\_\+version, uint8\+\_\+t sdo)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_ab8be66c50f9dd6d60e89e2271ada4678}{B\+M\+P280\+\_\+read\+\_\+temperature}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a0dba45368d1a589fbf2feb1cf9066d34}{B\+M\+P280\+\_\+read\+\_\+pressure}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t oss)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_acea72eb3c84563660fe0e9a5fbe6011b}{B\+M\+P280\+\_\+read\+\_\+altitude}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a05d95278054ea18215262656586fc5eb}{B\+M\+P280\+\_\+read}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a9ae58e557a60481458b6e79755c89fc4}{B\+M\+P280\+\_\+set\+\_\+power\+\_\+mode}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t mode)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_acc0a85c89f2746f443e9520aa2f536f6}{B\+M\+P280\+\_\+set\+\_\+filter}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t filter)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a9ff2c7141139c064bbfb90a3780a692d}{B\+M\+P280\+\_\+set\+\_\+standby\+\_\+time}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t stb\+\_\+time)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a9e8eb62b4e95643a38e9bab48a4ba2d8}{B\+M\+P280\+\_\+set\+\_\+temp\+\_\+osrs}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t osrs)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_acb889787c5f7d3272c58f18a7dfc1cb8}{B\+M\+P280\+\_\+set\+\_\+press\+\_\+osrs}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t osrs)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_a09f57d7c1e93429c5e97264627d0d68a}{B\+M\+P280\+\_\+compensate\+\_\+temp}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8h_ab3fa64bb352a08ae00e29499c46955d7}{B\+M\+P280\+\_\+compensate\+\_\+press}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_b_m_p280_8h_a9847f7761f50ef7d6c518c5cb79f1333}\label{_b_m_p280_8h_a9847f7761f50ef7d6c518c5cb79f1333}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_DEFAULT\_ID@{BMP280\_DEFAULT\_ID}}
+\index{BMP280\_DEFAULT\_ID@{BMP280\_DEFAULT\_ID}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_DEFAULT\_ID}{BMP280\_DEFAULT\_ID}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+ID~0x58}
+
+
+
+Definition at line 69 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ad36264110a987b313776d16c48644333}\label{_b_m_p280_8h_ad36264110a987b313776d16c48644333}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FILTER\_16@{BMP280\_FILTER\_16}}
+\index{BMP280\_FILTER\_16@{BMP280\_FILTER\_16}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FILTER\_16}{BMP280\_FILTER\_16}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+16~0x04}
+
+
+
+Definition at line 96 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a197c6c650b06a90ab731450df705ca4f}\label{_b_m_p280_8h_a197c6c650b06a90ab731450df705ca4f}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FILTER\_2@{BMP280\_FILTER\_2}}
+\index{BMP280\_FILTER\_2@{BMP280\_FILTER\_2}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FILTER\_2}{BMP280\_FILTER\_2}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+2~0x01}
+
+
+
+Definition at line 93 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aaf383eb2e0fa52e4a50407ce3652f81a}\label{_b_m_p280_8h_aaf383eb2e0fa52e4a50407ce3652f81a}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FILTER\_4@{BMP280\_FILTER\_4}}
+\index{BMP280\_FILTER\_4@{BMP280\_FILTER\_4}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FILTER\_4}{BMP280\_FILTER\_4}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+4~0x02}
+
+
+
+Definition at line 94 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a021113292cadbd650969884d2d2fdc49}\label{_b_m_p280_8h_a021113292cadbd650969884d2d2fdc49}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FILTER\_8@{BMP280\_FILTER\_8}}
+\index{BMP280\_FILTER\_8@{BMP280\_FILTER\_8}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FILTER\_8}{BMP280\_FILTER\_8}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+8~0x03}
+
+
+
+Definition at line 95 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_abb506c91d3561f7c3e8123102b223726}\label{_b_m_p280_8h_abb506c91d3561f7c3e8123102b223726}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FILTER\_MASK@{BMP280\_FILTER\_MASK}}
+\index{BMP280\_FILTER\_MASK@{BMP280\_FILTER\_MASK}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FILTER\_MASK}{BMP280\_FILTER\_MASK}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+M\+A\+SK~0x\+E3}
+
+
+
+Definition at line 91 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a788525a760c9cba4df301185908eca97}\label{_b_m_p280_8h_a788525a760c9cba4df301185908eca97}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FILTER\_OFF@{BMP280\_FILTER\_OFF}}
+\index{BMP280\_FILTER\_OFF@{BMP280\_FILTER\_OFF}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FILTER\_OFF}{BMP280\_FILTER\_OFF}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+O\+FF~0x00}
+
+
+
+Definition at line 92 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ac8bf60935bb1223191290b73f046dc72}\label{_b_m_p280_8h_ac8bf60935bb1223191290b73f046dc72}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_FORCED\_MODE@{BMP280\_FORCED\_MODE}}
+\index{BMP280\_FORCED\_MODE@{BMP280\_FORCED\_MODE}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_FORCED\_MODE}{BMP280\_FORCED\_MODE}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+M\+O\+DE~0x01}
+
+
+
+Definition at line 78 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aa58a90f8c2ec9ac45d8b345f91fdfab1}\label{_b_m_p280_8h_aa58a90f8c2ec9ac45d8b345f91fdfab1}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_I2C\_ADDR@{BMP280\_I2C\_ADDR}}
+\index{BMP280\_I2C\_ADDR@{BMP280\_I2C\_ADDR}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_I2C\_ADDR}{BMP280\_I2C\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+I2\+C\+\_\+\+A\+D\+DR~0x\+EC}
+
+
+
+Definition at line 28 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a5c988c599f3e498f853ef7f7e8e78ae4}\label{_b_m_p280_8h_a5c988c599f3e498f853ef7f7e8e78ae4}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_MEASURING\_MASK@{BMP280\_MEASURING\_MASK}}
+\index{BMP280\_MEASURING\_MASK@{BMP280\_MEASURING\_MASK}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_MEASURING\_MASK}{BMP280\_MEASURING\_MASK}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+M\+E\+A\+S\+U\+R\+I\+N\+G\+\_\+\+M\+A\+SK~0x0F}
+
+
+
+Definition at line 71 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_afe914c413d53e0e52ca1df11c9beda9c}\label{_b_m_p280_8h_afe914c413d53e0e52ca1df11c9beda9c}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_MODE\_MASK@{BMP280\_MODE\_MASK}}
+\index{BMP280\_MODE\_MASK@{BMP280\_MODE\_MASK}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_MODE\_MASK}{BMP280\_MODE\_MASK}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK~0x\+FC}
+
+
+
+Definition at line 76 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ab02b05fc4b72013ebe1f16dc7a7266a7}\label{_b_m_p280_8h_ab02b05fc4b72013ebe1f16dc7a7266a7}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_NORMAL\_MODE@{BMP280\_NORMAL\_MODE}}
+\index{BMP280\_NORMAL\_MODE@{BMP280\_NORMAL\_MODE}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_NORMAL\_MODE}{BMP280\_NORMAL\_MODE}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+M\+O\+DE~0x03}
+
+
+
+Definition at line 79 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_afb3be5fd52228c20a8c2e6d3653d48d5}\label{_b_m_p280_8h_afb3be5fd52228c20a8c2e6d3653d48d5}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_1@{BMP280\_OSRS\_1}}
+\index{BMP280\_OSRS\_1@{BMP280\_OSRS\_1}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_1}{BMP280\_OSRS\_1}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+1~0x01}
+
+
+
+Definition at line 101 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ad7af69f89297d23319e4f279d6541fbf}\label{_b_m_p280_8h_ad7af69f89297d23319e4f279d6541fbf}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_16@{BMP280\_OSRS\_16}}
+\index{BMP280\_OSRS\_16@{BMP280\_OSRS\_16}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_16}{BMP280\_OSRS\_16}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+16~0x05}
+
+
+
+Definition at line 105 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a5117a4b3a8effb38be24d780a4a85d72}\label{_b_m_p280_8h_a5117a4b3a8effb38be24d780a4a85d72}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_2@{BMP280\_OSRS\_2}}
+\index{BMP280\_OSRS\_2@{BMP280\_OSRS\_2}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_2}{BMP280\_OSRS\_2}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+2~0x02}
+
+
+
+Definition at line 102 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a409a55a11a04e8b4577213a768167f7a}\label{_b_m_p280_8h_a409a55a11a04e8b4577213a768167f7a}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_4@{BMP280\_OSRS\_4}}
+\index{BMP280\_OSRS\_4@{BMP280\_OSRS\_4}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_4}{BMP280\_OSRS\_4}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+4~0x03}
+
+
+
+Definition at line 103 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ab93e38d470faf4a82002017438711224}\label{_b_m_p280_8h_ab93e38d470faf4a82002017438711224}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_8@{BMP280\_OSRS\_8}}
+\index{BMP280\_OSRS\_8@{BMP280\_OSRS\_8}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_8}{BMP280\_OSRS\_8}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+8~0x04}
+
+
+
+Definition at line 104 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ae99f976009f2bd39985e6f787f818c98}\label{_b_m_p280_8h_ae99f976009f2bd39985e6f787f818c98}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_P\_MASK@{BMP280\_OSRS\_P\_MASK}}
+\index{BMP280\_OSRS\_P\_MASK@{BMP280\_OSRS\_P\_MASK}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_P\_MASK}{BMP280\_OSRS\_P\_MASK}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+\+P\+\_\+\+M\+A\+SK~0x\+E3}
+
+
+
+Definition at line 98 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ac0facc0682246849c582ee6dbd759b95}\label{_b_m_p280_8h_ac0facc0682246849c582ee6dbd759b95}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_SKIPPED@{BMP280\_OSRS\_SKIPPED}}
+\index{BMP280\_OSRS\_SKIPPED@{BMP280\_OSRS\_SKIPPED}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_SKIPPED}{BMP280\_OSRS\_SKIPPED}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+\+S\+K\+I\+P\+P\+ED~0x00}
+
+
+
+Definition at line 100 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a2e88bd19a6cbdec7f2f804b96c267023}\label{_b_m_p280_8h_a2e88bd19a6cbdec7f2f804b96c267023}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_OSRS\_T\_MASK@{BMP280\_OSRS\_T\_MASK}}
+\index{BMP280\_OSRS\_T\_MASK@{BMP280\_OSRS\_T\_MASK}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_OSRS\_T\_MASK}{BMP280\_OSRS\_T\_MASK}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+O\+S\+R\+S\+\_\+\+T\+\_\+\+M\+A\+SK~0x1F}
+
+
+
+Definition at line 99 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a45694d6e3967184999c884d88a76178e}\label{_b_m_p280_8h_a45694d6e3967184999c884d88a76178e}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_CONFIG@{BMP280\_REG\_CONFIG}}
+\index{BMP280\_REG\_CONFIG@{BMP280\_REG\_CONFIG}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_CONFIG}{BMP280\_REG\_CONFIG}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+IG~0x\+F5}
+
+
+
+Definition at line 35 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a72ad9efb996305f741d5ac90bd974454}\label{_b_m_p280_8h_a72ad9efb996305f741d5ac90bd974454}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_CONTROL@{BMP280\_REG\_CONTROL}}
+\index{BMP280\_REG\_CONTROL@{BMP280\_REG\_CONTROL}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_CONTROL}{BMP280\_REG\_CONTROL}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+T\+R\+OL~0x\+F4}
+
+
+
+Definition at line 34 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a37f071326f27f31400e13cc00ff3faa4}\label{_b_m_p280_8h_a37f071326f27f31400e13cc00ff3faa4}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_ID@{BMP280\_REG\_ID}}
+\index{BMP280\_REG\_ID@{BMP280\_REG\_ID}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_ID}{BMP280\_REG\_ID}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+ID~0x\+D0}
+
+
+
+Definition at line 31 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aa04b41ba8bbe706ee3b8263518d10efb}\label{_b_m_p280_8h_aa04b41ba8bbe706ee3b8263518d10efb}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P1\_LSB@{BMP280\_REG\_P1\_LSB}}
+\index{BMP280\_REG\_P1\_LSB@{BMP280\_REG\_P1\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P1\_LSB}{BMP280\_REG\_P1\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P1\+\_\+\+L\+SB~0x8E}
+
+
+
+Definition at line 49 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a9532ceee65d954f3b132d40e4a63e82e}\label{_b_m_p280_8h_a9532ceee65d954f3b132d40e4a63e82e}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P1\_MSB@{BMP280\_REG\_P1\_MSB}}
+\index{BMP280\_REG\_P1\_MSB@{BMP280\_REG\_P1\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P1\_MSB}{BMP280\_REG\_P1\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P1\+\_\+\+M\+SB~0x8F}
+
+
+
+Definition at line 50 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a3e24d85748931e4bcfb08667fe5daee5}\label{_b_m_p280_8h_a3e24d85748931e4bcfb08667fe5daee5}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P2\_LSB@{BMP280\_REG\_P2\_LSB}}
+\index{BMP280\_REG\_P2\_LSB@{BMP280\_REG\_P2\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P2\_LSB}{BMP280\_REG\_P2\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P2\+\_\+\+L\+SB~0x90}
+
+
+
+Definition at line 51 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a36e1ceb9349773bd8b51c8f8831a1eac}\label{_b_m_p280_8h_a36e1ceb9349773bd8b51c8f8831a1eac}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P2\_MSB@{BMP280\_REG\_P2\_MSB}}
+\index{BMP280\_REG\_P2\_MSB@{BMP280\_REG\_P2\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P2\_MSB}{BMP280\_REG\_P2\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P2\+\_\+\+M\+SB~0x91}
+
+
+
+Definition at line 52 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a4670550b4e466d3f790ae3de41549399}\label{_b_m_p280_8h_a4670550b4e466d3f790ae3de41549399}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P3\_LSB@{BMP280\_REG\_P3\_LSB}}
+\index{BMP280\_REG\_P3\_LSB@{BMP280\_REG\_P3\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P3\_LSB}{BMP280\_REG\_P3\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P3\+\_\+\+L\+SB~0x92}
+
+
+
+Definition at line 53 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a93b4193427d383f65c3c54f909d90a8b}\label{_b_m_p280_8h_a93b4193427d383f65c3c54f909d90a8b}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P3\_MSB@{BMP280\_REG\_P3\_MSB}}
+\index{BMP280\_REG\_P3\_MSB@{BMP280\_REG\_P3\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P3\_MSB}{BMP280\_REG\_P3\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P3\+\_\+\+M\+SB~0x93}
+
+
+
+Definition at line 54 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aa3b657dc183f917705b7da5d8af6e492}\label{_b_m_p280_8h_aa3b657dc183f917705b7da5d8af6e492}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P4\_LSB@{BMP280\_REG\_P4\_LSB}}
+\index{BMP280\_REG\_P4\_LSB@{BMP280\_REG\_P4\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P4\_LSB}{BMP280\_REG\_P4\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P4\+\_\+\+L\+SB~0x94}
+
+
+
+Definition at line 55 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a6c900906eb97ad6480e702e8ad81bd62}\label{_b_m_p280_8h_a6c900906eb97ad6480e702e8ad81bd62}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P4\_MSB@{BMP280\_REG\_P4\_MSB}}
+\index{BMP280\_REG\_P4\_MSB@{BMP280\_REG\_P4\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P4\_MSB}{BMP280\_REG\_P4\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P4\+\_\+\+M\+SB~0x95}
+
+
+
+Definition at line 56 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a584f4a505a4226b8036aef5ab1177e88}\label{_b_m_p280_8h_a584f4a505a4226b8036aef5ab1177e88}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P5\_LSB@{BMP280\_REG\_P5\_LSB}}
+\index{BMP280\_REG\_P5\_LSB@{BMP280\_REG\_P5\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P5\_LSB}{BMP280\_REG\_P5\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P5\+\_\+\+L\+SB~0x96}
+
+
+
+Definition at line 57 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aa7320182bdf3c73da18b330c5f5d47fb}\label{_b_m_p280_8h_aa7320182bdf3c73da18b330c5f5d47fb}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P5\_MSB@{BMP280\_REG\_P5\_MSB}}
+\index{BMP280\_REG\_P5\_MSB@{BMP280\_REG\_P5\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P5\_MSB}{BMP280\_REG\_P5\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P5\+\_\+\+M\+SB~0x97}
+
+
+
+Definition at line 58 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a028732c9499cb7962ce5856219f8d980}\label{_b_m_p280_8h_a028732c9499cb7962ce5856219f8d980}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P6\_LSB@{BMP280\_REG\_P6\_LSB}}
+\index{BMP280\_REG\_P6\_LSB@{BMP280\_REG\_P6\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P6\_LSB}{BMP280\_REG\_P6\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P6\+\_\+\+L\+SB~0x98}
+
+
+
+Definition at line 59 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a26ddb74f66494a4d45cade9712c34d1b}\label{_b_m_p280_8h_a26ddb74f66494a4d45cade9712c34d1b}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P6\_MSB@{BMP280\_REG\_P6\_MSB}}
+\index{BMP280\_REG\_P6\_MSB@{BMP280\_REG\_P6\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P6\_MSB}{BMP280\_REG\_P6\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P6\+\_\+\+M\+SB~0x99}
+
+
+
+Definition at line 60 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a6d51464702bea541d2742fefe4a58088}\label{_b_m_p280_8h_a6d51464702bea541d2742fefe4a58088}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P7\_LSB@{BMP280\_REG\_P7\_LSB}}
+\index{BMP280\_REG\_P7\_LSB@{BMP280\_REG\_P7\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P7\_LSB}{BMP280\_REG\_P7\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P7\+\_\+\+L\+SB~0x9A}
+
+
+
+Definition at line 61 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a2955b2137560cabb4c30b1567b746db0}\label{_b_m_p280_8h_a2955b2137560cabb4c30b1567b746db0}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P7\_MSB@{BMP280\_REG\_P7\_MSB}}
+\index{BMP280\_REG\_P7\_MSB@{BMP280\_REG\_P7\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P7\_MSB}{BMP280\_REG\_P7\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P7\+\_\+\+M\+SB~0x9B}
+
+
+
+Definition at line 62 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a3d44aa93b1c8c29320bab0527cbb93f3}\label{_b_m_p280_8h_a3d44aa93b1c8c29320bab0527cbb93f3}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P8\_LSB@{BMP280\_REG\_P8\_LSB}}
+\index{BMP280\_REG\_P8\_LSB@{BMP280\_REG\_P8\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P8\_LSB}{BMP280\_REG\_P8\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P8\+\_\+\+L\+SB~0x9C}
+
+
+
+Definition at line 63 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a9e6b76089c4a0f07d0ed7359a7ed8121}\label{_b_m_p280_8h_a9e6b76089c4a0f07d0ed7359a7ed8121}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P8\_MSB@{BMP280\_REG\_P8\_MSB}}
+\index{BMP280\_REG\_P8\_MSB@{BMP280\_REG\_P8\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P8\_MSB}{BMP280\_REG\_P8\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P8\+\_\+\+M\+SB~0x9D}
+
+
+
+Definition at line 64 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a1b7388cfdb6c0165a9fc87e5a7e3c3c8}\label{_b_m_p280_8h_a1b7388cfdb6c0165a9fc87e5a7e3c3c8}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P9\_LSB@{BMP280\_REG\_P9\_LSB}}
+\index{BMP280\_REG\_P9\_LSB@{BMP280\_REG\_P9\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P9\_LSB}{BMP280\_REG\_P9\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P9\+\_\+\+L\+SB~0x9E}
+
+
+
+Definition at line 65 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a67b394e7334c885d33ba862dc82d7f56}\label{_b_m_p280_8h_a67b394e7334c885d33ba862dc82d7f56}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_P9\_MSB@{BMP280\_REG\_P9\_MSB}}
+\index{BMP280\_REG\_P9\_MSB@{BMP280\_REG\_P9\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_P9\_MSB}{BMP280\_REG\_P9\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P9\+\_\+\+M\+SB~0x9F}
+
+
+
+Definition at line 66 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ac703068787eaa09f9dab28448412cfab}\label{_b_m_p280_8h_ac703068787eaa09f9dab28448412cfab}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_PRESS\_LSB@{BMP280\_REG\_PRESS\_LSB}}
+\index{BMP280\_REG\_PRESS\_LSB@{BMP280\_REG\_PRESS\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_PRESS\_LSB}{BMP280\_REG\_PRESS\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+S\+\_\+\+L\+SB~0x\+F8}
+
+
+
+Definition at line 37 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_afa572b770b46ca3553cf4ed2de98d7f4}\label{_b_m_p280_8h_afa572b770b46ca3553cf4ed2de98d7f4}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_PRESS\_MSB@{BMP280\_REG\_PRESS\_MSB}}
+\index{BMP280\_REG\_PRESS\_MSB@{BMP280\_REG\_PRESS\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_PRESS\_MSB}{BMP280\_REG\_PRESS\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+S\+\_\+\+M\+SB~0x\+F7}
+
+
+
+Definition at line 36 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aeaaf4fef06ddf4bea3d4181a450bccf9}\label{_b_m_p280_8h_aeaaf4fef06ddf4bea3d4181a450bccf9}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_PRESS\_XLSB@{BMP280\_REG\_PRESS\_XLSB}}
+\index{BMP280\_REG\_PRESS\_XLSB@{BMP280\_REG\_PRESS\_XLSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_PRESS\_XLSB}{BMP280\_REG\_PRESS\_XLSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+S\+\_\+\+X\+L\+SB~0x\+F9}
+
+
+
+Definition at line 38 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a32455aa8a6c26667ef99d73fc02b662b}\label{_b_m_p280_8h_a32455aa8a6c26667ef99d73fc02b662b}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_RESET@{BMP280\_REG\_RESET}}
+\index{BMP280\_REG\_RESET@{BMP280\_REG\_RESET}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_RESET}{BMP280\_REG\_RESET}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+ET~0x\+E0}
+
+
+
+Definition at line 32 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a51471f4c3ee565c77fdcca39802cc197}\label{_b_m_p280_8h_a51471f4c3ee565c77fdcca39802cc197}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_STATUS@{BMP280\_REG\_STATUS}}
+\index{BMP280\_REG\_STATUS@{BMP280\_REG\_STATUS}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_STATUS}{BMP280\_REG\_STATUS}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+US~0x\+F3}
+
+
+
+Definition at line 33 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a8d52c46a37eedb208df71ebd1bc816bf}\label{_b_m_p280_8h_a8d52c46a37eedb208df71ebd1bc816bf}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_T1\_LSB@{BMP280\_REG\_T1\_LSB}}
+\index{BMP280\_REG\_T1\_LSB@{BMP280\_REG\_T1\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_T1\_LSB}{BMP280\_REG\_T1\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T1\+\_\+\+L\+SB~0x88}
+
+
+
+Definition at line 43 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a3b3d701ee8830e1e9bc290a490e04f90}\label{_b_m_p280_8h_a3b3d701ee8830e1e9bc290a490e04f90}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_T1\_MSB@{BMP280\_REG\_T1\_MSB}}
+\index{BMP280\_REG\_T1\_MSB@{BMP280\_REG\_T1\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_T1\_MSB}{BMP280\_REG\_T1\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T1\+\_\+\+M\+SB~0x89}
+
+
+
+Definition at line 44 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aeb25b4154d963075f3bcb793179d12f2}\label{_b_m_p280_8h_aeb25b4154d963075f3bcb793179d12f2}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_T2\_LSB@{BMP280\_REG\_T2\_LSB}}
+\index{BMP280\_REG\_T2\_LSB@{BMP280\_REG\_T2\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_T2\_LSB}{BMP280\_REG\_T2\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T2\+\_\+\+L\+SB~0x8A}
+
+
+
+Definition at line 45 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ac5a76b7b8674f82a6d65e6089cfdab27}\label{_b_m_p280_8h_ac5a76b7b8674f82a6d65e6089cfdab27}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_T2\_MSB@{BMP280\_REG\_T2\_MSB}}
+\index{BMP280\_REG\_T2\_MSB@{BMP280\_REG\_T2\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_T2\_MSB}{BMP280\_REG\_T2\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T2\+\_\+\+M\+SB~0x8B}
+
+
+
+Definition at line 46 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ae5744874b7d53d495b3433225c692109}\label{_b_m_p280_8h_ae5744874b7d53d495b3433225c692109}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_T3\_LSB@{BMP280\_REG\_T3\_LSB}}
+\index{BMP280\_REG\_T3\_LSB@{BMP280\_REG\_T3\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_T3\_LSB}{BMP280\_REG\_T3\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T3\+\_\+\+L\+SB~0x8C}
+
+
+
+Definition at line 47 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a2035b58466bf138549e38178402fb19e}\label{_b_m_p280_8h_a2035b58466bf138549e38178402fb19e}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_T3\_MSB@{BMP280\_REG\_T3\_MSB}}
+\index{BMP280\_REG\_T3\_MSB@{BMP280\_REG\_T3\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_T3\_MSB}{BMP280\_REG\_T3\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T3\+\_\+\+M\+SB~0x8D}
+
+
+
+Definition at line 48 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a946474615d59dfab906fd7a7613e9b35}\label{_b_m_p280_8h_a946474615d59dfab906fd7a7613e9b35}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_TEMP\_LSB@{BMP280\_REG\_TEMP\_LSB}}
+\index{BMP280\_REG\_TEMP\_LSB@{BMP280\_REG\_TEMP\_LSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_TEMP\_LSB}{BMP280\_REG\_TEMP\_LSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+L\+SB~0x\+FB}
+
+
+
+Definition at line 40 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a2cd2723c469cf7c1dfcdbd953593c474}\label{_b_m_p280_8h_a2cd2723c469cf7c1dfcdbd953593c474}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_TEMP\_MSB@{BMP280\_REG\_TEMP\_MSB}}
+\index{BMP280\_REG\_TEMP\_MSB@{BMP280\_REG\_TEMP\_MSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_TEMP\_MSB}{BMP280\_REG\_TEMP\_MSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+M\+SB~0x\+FA}
+
+
+
+Definition at line 39 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a887f1b7dab20ccebe9b1c451f15d3c86}\label{_b_m_p280_8h_a887f1b7dab20ccebe9b1c451f15d3c86}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_REG\_TEMP\_XLSB@{BMP280\_REG\_TEMP\_XLSB}}
+\index{BMP280\_REG\_TEMP\_XLSB@{BMP280\_REG\_TEMP\_XLSB}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_REG\_TEMP\_XLSB}{BMP280\_REG\_TEMP\_XLSB}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+X\+L\+SB~0x\+FC}
+
+
+
+Definition at line 41 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a37118440f3eae833c1d99f5400d3f80e}\label{_b_m_p280_8h_a37118440f3eae833c1d99f5400d3f80e}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_RESET\_VALUE@{BMP280\_RESET\_VALUE}}
+\index{BMP280\_RESET\_VALUE@{BMP280\_RESET\_VALUE}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_RESET\_VALUE}{BMP280\_RESET\_VALUE}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE~0x\+B6}
+
+
+
+Definition at line 70 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a85deb2679e4895764c420db149d5da1d}\label{_b_m_p280_8h_a85deb2679e4895764c420db149d5da1d}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_SDO\_OFF@{BMP280\_SDO\_OFF}}
+\index{BMP280\_SDO\_OFF@{BMP280\_SDO\_OFF}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_SDO\_OFF}{BMP280\_SDO\_OFF}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+D\+O\+\_\+\+O\+FF~0x00}
+
+
+
+Definition at line 74 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aeaee10f3775b8e1fc9bbf6f11e070362}\label{_b_m_p280_8h_aeaee10f3775b8e1fc9bbf6f11e070362}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_SDO\_ON@{BMP280\_SDO\_ON}}
+\index{BMP280\_SDO\_ON@{BMP280\_SDO\_ON}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_SDO\_ON}{BMP280\_SDO\_ON}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+D\+O\+\_\+\+ON~0x02}
+
+
+
+Definition at line 73 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a7250f5095499e8f2ea850e785b69c083}\label{_b_m_p280_8h_a7250f5095499e8f2ea850e785b69c083}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_SLEEP\_MODE@{BMP280\_SLEEP\_MODE}}
+\index{BMP280\_SLEEP\_MODE@{BMP280\_SLEEP\_MODE}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_SLEEP\_MODE}{BMP280\_SLEEP\_MODE}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE~0x00}
+
+
+
+Definition at line 77 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a627e885aa92803ad8e30f46291f44c85}\label{_b_m_p280_8h_a627e885aa92803ad8e30f46291f44c85}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_0d5@{BMP280\_STB\_TIME\_0d5}}
+\index{BMP280\_STB\_TIME\_0d5@{BMP280\_STB\_TIME\_0d5}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_0d5}{BMP280\_STB\_TIME\_0d5}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+0d5~0x00}
+
+
+
+Definition at line 82 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ab90b6163927fa63378062970a3a12e89}\label{_b_m_p280_8h_ab90b6163927fa63378062970a3a12e89}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_1000@{BMP280\_STB\_TIME\_1000}}
+\index{BMP280\_STB\_TIME\_1000@{BMP280\_STB\_TIME\_1000}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_1000}{BMP280\_STB\_TIME\_1000}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+1000~0x05}
+
+
+
+Definition at line 87 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_ac5df7480d006f693f4c795535936fe26}\label{_b_m_p280_8h_ac5df7480d006f693f4c795535936fe26}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_125@{BMP280\_STB\_TIME\_125}}
+\index{BMP280\_STB\_TIME\_125@{BMP280\_STB\_TIME\_125}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_125}{BMP280\_STB\_TIME\_125}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+125~0x02}
+
+
+
+Definition at line 84 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_aecb205fc3195ce16421e8fac245ed52e}\label{_b_m_p280_8h_aecb205fc3195ce16421e8fac245ed52e}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_2000@{BMP280\_STB\_TIME\_2000}}
+\index{BMP280\_STB\_TIME\_2000@{BMP280\_STB\_TIME\_2000}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_2000}{BMP280\_STB\_TIME\_2000}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+2000~0x06}
+
+
+
+Definition at line 88 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a944c7a1d36cf5882a5961f73d6ea9c0d}\label{_b_m_p280_8h_a944c7a1d36cf5882a5961f73d6ea9c0d}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_250@{BMP280\_STB\_TIME\_250}}
+\index{BMP280\_STB\_TIME\_250@{BMP280\_STB\_TIME\_250}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_250}{BMP280\_STB\_TIME\_250}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+250~0x03}
+
+
+
+Definition at line 85 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_af906c41cc044dffd22226091f23e5a52}\label{_b_m_p280_8h_af906c41cc044dffd22226091f23e5a52}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_4000@{BMP280\_STB\_TIME\_4000}}
+\index{BMP280\_STB\_TIME\_4000@{BMP280\_STB\_TIME\_4000}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_4000}{BMP280\_STB\_TIME\_4000}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+4000~0x07}
+
+
+
+Definition at line 89 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a3746b4dfc2f141ad525840f96edd3bb1}\label{_b_m_p280_8h_a3746b4dfc2f141ad525840f96edd3bb1}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_500@{BMP280\_STB\_TIME\_500}}
+\index{BMP280\_STB\_TIME\_500@{BMP280\_STB\_TIME\_500}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_500}{BMP280\_STB\_TIME\_500}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+500~0x04}
+
+
+
+Definition at line 86 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a4b87a746864149a65d6281e0a5b5d38f}\label{_b_m_p280_8h_a4b87a746864149a65d6281e0a5b5d38f}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_62d5@{BMP280\_STB\_TIME\_62d5}}
+\index{BMP280\_STB\_TIME\_62d5@{BMP280\_STB\_TIME\_62d5}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_62d5}{BMP280\_STB\_TIME\_62d5}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+62d5~0x01}
+
+
+
+Definition at line 83 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a0d0207c94112ec6b382584b0755481bd}\label{_b_m_p280_8h_a0d0207c94112ec6b382584b0755481bd}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_STB\_TIME\_MASK@{BMP280\_STB\_TIME\_MASK}}
+\index{BMP280\_STB\_TIME\_MASK@{BMP280\_STB\_TIME\_MASK}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_STB\_TIME\_MASK}{BMP280\_STB\_TIME\_MASK}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+S\+T\+B\+\_\+\+T\+I\+M\+E\+\_\+\+M\+A\+SK~0x1F}
+
+
+
+Definition at line 81 of file B\+M\+P280.\+h.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}\label{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_TIMEOUT@{BMP280\_TIMEOUT}}
+\index{BMP280\_TIMEOUT@{BMP280\_TIMEOUT}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_TIMEOUT}{BMP280\_TIMEOUT}}
+{\footnotesize\ttfamily \#define B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT~100}
+
+
+
+Definition at line 25 of file B\+M\+P280.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}\label{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}} 
+\index{BMP280.h@{BMP280.h}!BMP280@{BMP280}}
+\index{BMP280@{BMP280}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280}{BMP280}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__bmp280}{\+\_\+bmp280}} \mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}}}
+
+\mbox{\Hypertarget{_b_m_p280_8h_a4848876fe81229a1c43c1d2ba6d9b885}\label{_b_m_p280_8h_a4848876fe81229a1c43c1d2ba6d9b885}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_cal\_data@{BMP280\_cal\_data}}
+\index{BMP280\_cal\_data@{BMP280\_cal\_data}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_cal\_data}{BMP280\_cal\_data}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__bmp280__cal__data}{\+\_\+bmp280\+\_\+cal\+\_\+data}} \mbox{\hyperlink{_b_m_p280_8h_a4848876fe81229a1c43c1d2ba6d9b885}{B\+M\+P280\+\_\+cal\+\_\+data}}}
+
+\mbox{\Hypertarget{_b_m_p280_8h_a433efb3e27b9cace9198e75f0b527bde}\label{_b_m_p280_8h_a433efb3e27b9cace9198e75f0b527bde}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_oss\_modes\_t@{BMP280\_oss\_modes\_t}}
+\index{BMP280\_oss\_modes\_t@{BMP280\_oss\_modes\_t}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_oss\_modes\_t}{BMP280\_oss\_modes\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444}{\+\_\+bmp280\+\_\+oss\+\_\+modes}} \mbox{\hyperlink{_b_m_p280_8h_a433efb3e27b9cace9198e75f0b527bde}{B\+M\+P280\+\_\+oss\+\_\+modes\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444}\label{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444}} 
+\index{BMP280.h@{BMP280.h}!\_bmp280\_oss\_modes@{\_bmp280\_oss\_modes}}
+\index{\_bmp280\_oss\_modes@{\_bmp280\_oss\_modes}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{\_bmp280\_oss\_modes}{\_bmp280\_oss\_modes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444}{\+\_\+bmp280\+\_\+oss\+\_\+modes}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSS\_ULOW@{OSS\_ULOW}!BMP280.h@{BMP280.h}}\index{BMP280.h@{BMP280.h}!OSS\_ULOW@{OSS\_ULOW}}}\mbox{\Hypertarget{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a6a50cca0b746eeb0f20a8da18e6674c9}\label{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a6a50cca0b746eeb0f20a8da18e6674c9}} 
+O\+S\+S\+\_\+\+U\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSS\_LOW@{OSS\_LOW}!BMP280.h@{BMP280.h}}\index{BMP280.h@{BMP280.h}!OSS\_LOW@{OSS\_LOW}}}\mbox{\Hypertarget{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a34f10435b27a9cde1c50cf0e69828ac4}\label{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a34f10435b27a9cde1c50cf0e69828ac4}} 
+O\+S\+S\+\_\+\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSS\_STD@{OSS\_STD}!BMP280.h@{BMP280.h}}\index{BMP280.h@{BMP280.h}!OSS\_STD@{OSS\_STD}}}\mbox{\Hypertarget{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444addc74f7b0d988c2ebb535b166611d27f}\label{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444addc74f7b0d988c2ebb535b166611d27f}} 
+O\+S\+S\+\_\+\+S\+TD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSS\_HIGH@{OSS\_HIGH}!BMP280.h@{BMP280.h}}\index{BMP280.h@{BMP280.h}!OSS\_HIGH@{OSS\_HIGH}}}\mbox{\Hypertarget{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a7ba52b782a7ea008479dca3fa09935da}\label{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444a7ba52b782a7ea008479dca3fa09935da}} 
+O\+S\+S\+\_\+\+H\+I\+GH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSS\_UHIGH@{OSS\_UHIGH}!BMP280.h@{BMP280.h}}\index{BMP280.h@{BMP280.h}!OSS\_UHIGH@{OSS\_UHIGH}}}\mbox{\Hypertarget{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444ad698beedd2887b70f4769c12ccfc16e5}\label{_b_m_p280_8h_af36fa64f0077fd77fa1fb7efee08a444ad698beedd2887b70f4769c12ccfc16e5}} 
+O\+S\+S\+\_\+\+U\+H\+I\+GH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 142 of file B\+M\+P280.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_b_m_p280_8h_ab3fa64bb352a08ae00e29499c46955d7}\label{_b_m_p280_8h_ab3fa64bb352a08ae00e29499c46955d7}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_compensate\_press@{BMP280\_compensate\_press}}
+\index{BMP280\_compensate\_press@{BMP280\_compensate\_press}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_compensate\_press()}{BMP280\_compensate\_press()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+compensate\+\_\+press (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a09f57d7c1e93429c5e97264627d0d68a}\label{_b_m_p280_8h_a09f57d7c1e93429c5e97264627d0d68a}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_compensate\_temp@{BMP280\_compensate\_temp}}
+\index{BMP280\_compensate\_temp@{BMP280\_compensate\_temp}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_compensate\_temp()}{BMP280\_compensate\_temp()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+compensate\+\_\+temp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 320 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a329d6d3649ef8d33476a3da29d449c79}\label{_b_m_p280_8h_a329d6d3649ef8d33476a3da29d449c79}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_init@{BMP280\_init}}
+\index{BMP280\_init@{BMP280\_init}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_init()}{BMP280\_init()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{sensor\+\_\+version,  }\item[{uint8\+\_\+t}]{sdo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a05d95278054ea18215262656586fc5eb}\label{_b_m_p280_8h_a05d95278054ea18215262656586fc5eb}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_read@{BMP280\_read}}
+\index{BMP280\_read@{BMP280\_read}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_read()}{BMP280\_read()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 283 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_acea72eb3c84563660fe0e9a5fbe6011b}\label{_b_m_p280_8h_acea72eb3c84563660fe0e9a5fbe6011b}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_read\_altitude@{BMP280\_read\_altitude}}
+\index{BMP280\_read\_altitude@{BMP280\_read\_altitude}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_read\_altitude()}{BMP280\_read\_altitude()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+read\+\_\+altitude (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8h_a0dba45368d1a589fbf2feb1cf9066d34}\label{_b_m_p280_8h_a0dba45368d1a589fbf2feb1cf9066d34}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_read\_pressure@{BMP280\_read\_pressure}}
+\index{BMP280\_read\_pressure@{BMP280\_read\_pressure}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_read\_pressure()}{BMP280\_read\_pressure()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+read\+\_\+pressure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{oss }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8h_ab8be66c50f9dd6d60e89e2271ada4678}\label{_b_m_p280_8h_ab8be66c50f9dd6d60e89e2271ada4678}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_read\_temperature@{BMP280\_read\_temperature}}
+\index{BMP280\_read\_temperature@{BMP280\_read\_temperature}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_read\_temperature()}{BMP280\_read\_temperature()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+read\+\_\+temperature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8h_acc0a85c89f2746f443e9520aa2f536f6}\label{_b_m_p280_8h_acc0a85c89f2746f443e9520aa2f536f6}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_set\_filter@{BMP280\_set\_filter}}
+\index{BMP280\_set\_filter@{BMP280\_set\_filter}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_filter()}{BMP280\_set\_filter()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{filter }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a9ae58e557a60481458b6e79755c89fc4}\label{_b_m_p280_8h_a9ae58e557a60481458b6e79755c89fc4}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_set\_power\_mode@{BMP280\_set\_power\_mode}}
+\index{BMP280\_set\_power\_mode@{BMP280\_set\_power\_mode}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_power\_mode()}{BMP280\_set\_power\_mode()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+power\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_acb889787c5f7d3272c58f18a7dfc1cb8}\label{_b_m_p280_8h_acb889787c5f7d3272c58f18a7dfc1cb8}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_set\_press\_osrs@{BMP280\_set\_press\_osrs}}
+\index{BMP280\_set\_press\_osrs@{BMP280\_set\_press\_osrs}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_press\_osrs()}{BMP280\_set\_press\_osrs()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+press\+\_\+osrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{osrs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a9ff2c7141139c064bbfb90a3780a692d}\label{_b_m_p280_8h_a9ff2c7141139c064bbfb90a3780a692d}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_set\_standby\_time@{BMP280\_set\_standby\_time}}
+\index{BMP280\_set\_standby\_time@{BMP280\_set\_standby\_time}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_standby\_time()}{BMP280\_set\_standby\_time()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+standby\+\_\+time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{stb\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8h_a9e8eb62b4e95643a38e9bab48a4ba2d8}\label{_b_m_p280_8h_a9e8eb62b4e95643a38e9bab48a4ba2d8}} 
+\index{BMP280.h@{BMP280.h}!BMP280\_set\_temp\_osrs@{BMP280\_set\_temp\_osrs}}
+\index{BMP280\_set\_temp\_osrs@{BMP280\_set\_temp\_osrs}!BMP280.h@{BMP280.h}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_temp\_osrs()}{BMP280\_set\_temp\_osrs()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+temp\+\_\+osrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{osrs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file B\+M\+P280.\+c.
+

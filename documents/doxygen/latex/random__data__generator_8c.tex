@@ -1,0 +1,155 @@
+\hypertarget{random__data__generator_8c}{}\doxysection{utilities/random\+\_\+data\+\_\+generator/random\+\_\+data\+\_\+generator.c File Reference}
+\label{random__data__generator_8c}\index{utilities/random\_data\_generator/random\_data\_generator.c@{utilities/random\_data\_generator/random\_data\_generator.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}~0
+\item 
+\#define \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}~1
+\item 
+\#define \mbox{\hyperlink{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}{F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{random__data__generator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_a28ec88efea6ecb3a3d7b8f64884a28f3}{input\+\_\+file\+\_\+name}} \mbox{[}\mbox{\hyperlink{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}{F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_aa2dbc64db46f9eaa514d96f964c9723d}{output\+\_\+file\+\_\+name}} \mbox{[}\mbox{\hyperlink{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}{F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_aee7824a6872cf053d5689928a097837a}{default\+\_\+input}} = \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_a789916207a58709fcd0f18c742062006}{default\+\_\+output}} = \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_adcad5ba415a17c866b30397053ffd4f6}{auto\+\_\+seed}} = \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_ac835a7209d652f3ad94391457ffa6dd7}{print\+\_\+dim}} = \mbox{\hyperlink{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}
+\item 
+char \mbox{\hyperlink{random__data__generator_8c_a99459f658d5aaa145c38303709105ef4}{auto\+\_\+read}} = \mbox{\hyperlink{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}\label{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{FALSE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~0}
+
+
+
+Definition at line 5 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}\label{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!FILE\_NAME\_SIZE@{FILE\_NAME\_SIZE}}
+\index{FILE\_NAME\_SIZE@{FILE\_NAME\_SIZE}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{FILE\_NAME\_SIZE}{FILE\_NAME\_SIZE}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE~100}
+
+
+
+Definition at line 8 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}\label{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{TRUE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~1}
+
+
+
+Definition at line 6 of file random\+\_\+data\+\_\+generator.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{random__data__generator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{random__data__generator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!main@{main}}
+\index{main@{main}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file random\+\_\+data\+\_\+generator.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{random__data__generator_8c_a99459f658d5aaa145c38303709105ef4}\label{random__data__generator_8c_a99459f658d5aaa145c38303709105ef4}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!auto\_read@{auto\_read}}
+\index{auto\_read@{auto\_read}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{auto\_read}{auto\_read}}
+{\footnotesize\ttfamily char auto\+\_\+read = \mbox{\hyperlink{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}}
+
+
+
+Definition at line 17 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_adcad5ba415a17c866b30397053ffd4f6}\label{random__data__generator_8c_adcad5ba415a17c866b30397053ffd4f6}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!auto\_seed@{auto\_seed}}
+\index{auto\_seed@{auto\_seed}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{auto\_seed}{auto\_seed}}
+{\footnotesize\ttfamily char auto\+\_\+seed = \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}}
+
+
+
+Definition at line 15 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_aee7824a6872cf053d5689928a097837a}\label{random__data__generator_8c_aee7824a6872cf053d5689928a097837a}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!default\_input@{default\_input}}
+\index{default\_input@{default\_input}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{default\_input}{default\_input}}
+{\footnotesize\ttfamily char default\+\_\+input = \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}}
+
+
+
+Definition at line 13 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_a789916207a58709fcd0f18c742062006}\label{random__data__generator_8c_a789916207a58709fcd0f18c742062006}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!default\_output@{default\_output}}
+\index{default\_output@{default\_output}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{default\_output}{default\_output}}
+{\footnotesize\ttfamily char default\+\_\+output = \mbox{\hyperlink{random__data__generator_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}}
+
+
+
+Definition at line 14 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_a28ec88efea6ecb3a3d7b8f64884a28f3}\label{random__data__generator_8c_a28ec88efea6ecb3a3d7b8f64884a28f3}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!input\_file\_name@{input\_file\_name}}
+\index{input\_file\_name@{input\_file\_name}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{input\_file\_name}{input\_file\_name}}
+{\footnotesize\ttfamily char input\+\_\+file\+\_\+name\mbox{[}\mbox{\hyperlink{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}{F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+
+
+Definition at line 10 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_aa2dbc64db46f9eaa514d96f964c9723d}\label{random__data__generator_8c_aa2dbc64db46f9eaa514d96f964c9723d}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!output\_file\_name@{output\_file\_name}}
+\index{output\_file\_name@{output\_file\_name}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{output\_file\_name}{output\_file\_name}}
+{\footnotesize\ttfamily char output\+\_\+file\+\_\+name\mbox{[}\mbox{\hyperlink{random__data__generator_8c_aa7a7fd4622267bc1b90eca7fbf99c7dd}{F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+
+
+Definition at line 11 of file random\+\_\+data\+\_\+generator.\+c.
+
+\mbox{\Hypertarget{random__data__generator_8c_ac835a7209d652f3ad94391457ffa6dd7}\label{random__data__generator_8c_ac835a7209d652f3ad94391457ffa6dd7}} 
+\index{random\_data\_generator.c@{random\_data\_generator.c}!print\_dim@{print\_dim}}
+\index{print\_dim@{print\_dim}!random\_data\_generator.c@{random\_data\_generator.c}}
+\doxysubsubsection{\texorpdfstring{print\_dim}{print\_dim}}
+{\footnotesize\ttfamily char print\+\_\+dim = \mbox{\hyperlink{random__data__generator_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}}
+
+
+
+Definition at line 16 of file random\+\_\+data\+\_\+generator.\+c.
+

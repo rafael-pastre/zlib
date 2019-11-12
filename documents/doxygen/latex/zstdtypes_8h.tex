@@ -1,0 +1,149 @@
+\hypertarget{zstdtypes_8h}{}\doxysection{standard/zstdtypes.h File Reference}
+\label{zstdtypes_8h}\index{standard/zstdtypes.h@{standard/zstdtypes.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{union__word8}{\+\_\+word8}}
+\item 
+union \mbox{\hyperlink{union__word16}{\+\_\+word16}}
+\item 
+union \mbox{\hyperlink{union__word32}{\+\_\+word32}}
+\item 
+union \mbox{\hyperlink{union__word64}{\+\_\+word64}}
+\item 
+struct \mbox{\hyperlink{struct__ascii__interval}{\+\_\+ascii\+\_\+interval}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef union \mbox{\hyperlink{union__word8}{\+\_\+word8}} \mbox{\hyperlink{zstdtypes_8h_af8241b0a400cc45169b4ef836fe855a0}{word8\+\_\+t}}
+\item 
+typedef union \mbox{\hyperlink{union__word16}{\+\_\+word16}} \mbox{\hyperlink{zstdtypes_8h_a241e6712393e629d8a8b0611ab38ea83}{word16\+\_\+t}}
+\item 
+typedef union \mbox{\hyperlink{union__word32}{\+\_\+word32}} \mbox{\hyperlink{zstdtypes_8h_a3eba7198f1be5916720f2d3f09148d1e}{word32\+\_\+t}}
+\item 
+typedef union \mbox{\hyperlink{union__word64}{\+\_\+word64}} \mbox{\hyperlink{zstdtypes_8h_a02bde6691dbceb93fffdc17173323758}{word64\+\_\+t}}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{zstdtypes_8h_a7efe5828c01ced3aba430db04bcf08e9}{ascii\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ascii__interval}{\+\_\+ascii\+\_\+interval}} \mbox{\hyperlink{zstdtypes_8h_a116935668b7c8d51ab2862a019c32413}{ascii\+\_\+interval\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dc}{\+\_\+flag}} \mbox{\hyperlink{zstdtypes_8h_a316a221ae215db9413fe927eed3be7e1}{flag\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44}{\+\_\+scmp}} \mbox{\hyperlink{zstdtypes_8h_a600e78df0fa9cc04c225b77b32433611}{scmp\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dc}{\+\_\+flag}} \{ \mbox{\hyperlink{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dcadefb12eed3e83b99bbec0435f8942c9d}{F\+L\+A\+G\+\_\+\+O\+FF}} = 0x00, 
+\mbox{\hyperlink{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dca1dc2283914a893f872de72fc305d04a9}{F\+L\+A\+G\+\_\+\+ON}} = 0x01
+ \}
+\item 
+enum \mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44}{\+\_\+scmp}} \{ \mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44aa1017e9b343135a54a98b6f479354d16}{L\+O\+W\+ER}} = -\/1, 
+\mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44a59a84258a4cb9025b567ee5139455029}{E\+Q\+U\+AL}} = 0, 
+\mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44a25b5ca2f56d99ba6ffcb5316adac34c1}{G\+R\+E\+A\+T\+ER}} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{zstdtypes_8h_a116935668b7c8d51ab2862a019c32413}\label{zstdtypes_8h_a116935668b7c8d51ab2862a019c32413}} 
+\index{zstdtypes.h@{zstdtypes.h}!ascii\_interval\_t@{ascii\_interval\_t}}
+\index{ascii\_interval\_t@{ascii\_interval\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{ascii\_interval\_t}{ascii\_interval\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ascii__interval}{\+\_\+ascii\+\_\+interval}} \mbox{\hyperlink{zstdtypes_8h_a116935668b7c8d51ab2862a019c32413}{ascii\+\_\+interval\+\_\+t}}}
+
+\mbox{\Hypertarget{zstdtypes_8h_a7efe5828c01ced3aba430db04bcf08e9}\label{zstdtypes_8h_a7efe5828c01ced3aba430db04bcf08e9}} 
+\index{zstdtypes.h@{zstdtypes.h}!ascii\_t@{ascii\_t}}
+\index{ascii\_t@{ascii\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{ascii\_t}{ascii\_t}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{zstdtypes_8h_a7efe5828c01ced3aba430db04bcf08e9}{ascii\+\_\+t}}}
+
+
+
+Definition at line 63 of file zstdtypes.\+h.
+
+\mbox{\Hypertarget{zstdtypes_8h_a316a221ae215db9413fe927eed3be7e1}\label{zstdtypes_8h_a316a221ae215db9413fe927eed3be7e1}} 
+\index{zstdtypes.h@{zstdtypes.h}!flag\_t@{flag\_t}}
+\index{flag\_t@{flag\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{flag\_t}{flag\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dc}{\+\_\+flag}} \mbox{\hyperlink{zstdtypes_8h_a316a221ae215db9413fe927eed3be7e1}{flag\+\_\+t}}}
+
+\mbox{\Hypertarget{zstdtypes_8h_a600e78df0fa9cc04c225b77b32433611}\label{zstdtypes_8h_a600e78df0fa9cc04c225b77b32433611}} 
+\index{zstdtypes.h@{zstdtypes.h}!scmp\_t@{scmp\_t}}
+\index{scmp\_t@{scmp\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{scmp\_t}{scmp\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44}{\+\_\+scmp}} \mbox{\hyperlink{zstdtypes_8h_a600e78df0fa9cc04c225b77b32433611}{scmp\+\_\+t}}}
+
+\mbox{\Hypertarget{zstdtypes_8h_a241e6712393e629d8a8b0611ab38ea83}\label{zstdtypes_8h_a241e6712393e629d8a8b0611ab38ea83}} 
+\index{zstdtypes.h@{zstdtypes.h}!word16\_t@{word16\_t}}
+\index{word16\_t@{word16\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{word16\_t}{word16\_t}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{union__word16}{\+\_\+word16}} \mbox{\hyperlink{zstdtypes_8h_a241e6712393e629d8a8b0611ab38ea83}{word16\+\_\+t}}}
+
+\mbox{\Hypertarget{zstdtypes_8h_a3eba7198f1be5916720f2d3f09148d1e}\label{zstdtypes_8h_a3eba7198f1be5916720f2d3f09148d1e}} 
+\index{zstdtypes.h@{zstdtypes.h}!word32\_t@{word32\_t}}
+\index{word32\_t@{word32\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{word32\_t}{word32\_t}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{union__word32}{\+\_\+word32}} \mbox{\hyperlink{zstdtypes_8h_a3eba7198f1be5916720f2d3f09148d1e}{word32\+\_\+t}}}
+
+\mbox{\Hypertarget{zstdtypes_8h_a02bde6691dbceb93fffdc17173323758}\label{zstdtypes_8h_a02bde6691dbceb93fffdc17173323758}} 
+\index{zstdtypes.h@{zstdtypes.h}!word64\_t@{word64\_t}}
+\index{word64\_t@{word64\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{word64\_t}{word64\_t}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{union__word64}{\+\_\+word64}} \mbox{\hyperlink{zstdtypes_8h_a02bde6691dbceb93fffdc17173323758}{word64\+\_\+t}}}
+
+\mbox{\Hypertarget{zstdtypes_8h_af8241b0a400cc45169b4ef836fe855a0}\label{zstdtypes_8h_af8241b0a400cc45169b4ef836fe855a0}} 
+\index{zstdtypes.h@{zstdtypes.h}!word8\_t@{word8\_t}}
+\index{word8\_t@{word8\_t}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{word8\_t}{word8\_t}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{union__word8}{\+\_\+word8}} \mbox{\hyperlink{zstdtypes_8h_af8241b0a400cc45169b4ef836fe855a0}{word8\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dc}\label{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dc}} 
+\index{zstdtypes.h@{zstdtypes.h}!\_flag@{\_flag}}
+\index{\_flag@{\_flag}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{\_flag}{\_flag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dc}{\+\_\+flag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAG\_OFF@{FLAG\_OFF}!zstdtypes.h@{zstdtypes.h}}\index{zstdtypes.h@{zstdtypes.h}!FLAG\_OFF@{FLAG\_OFF}}}\mbox{\Hypertarget{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dcadefb12eed3e83b99bbec0435f8942c9d}\label{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dcadefb12eed3e83b99bbec0435f8942c9d}} 
+F\+L\+A\+G\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAG\_ON@{FLAG\_ON}!zstdtypes.h@{zstdtypes.h}}\index{zstdtypes.h@{zstdtypes.h}!FLAG\_ON@{FLAG\_ON}}}\mbox{\Hypertarget{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dca1dc2283914a893f872de72fc305d04a9}\label{zstdtypes_8h_ab67e522783ea6e8b77674904f7ec26dca1dc2283914a893f872de72fc305d04a9}} 
+F\+L\+A\+G\+\_\+\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 72 of file zstdtypes.\+h.
+
+\mbox{\Hypertarget{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44}\label{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44}} 
+\index{zstdtypes.h@{zstdtypes.h}!\_scmp@{\_scmp}}
+\index{\_scmp@{\_scmp}!zstdtypes.h@{zstdtypes.h}}
+\doxysubsubsection{\texorpdfstring{\_scmp}{\_scmp}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44}{\+\_\+scmp}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOWER@{LOWER}!zstdtypes.h@{zstdtypes.h}}\index{zstdtypes.h@{zstdtypes.h}!LOWER@{LOWER}}}\mbox{\Hypertarget{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44aa1017e9b343135a54a98b6f479354d16}\label{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44aa1017e9b343135a54a98b6f479354d16}} 
+L\+O\+W\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EQUAL@{EQUAL}!zstdtypes.h@{zstdtypes.h}}\index{zstdtypes.h@{zstdtypes.h}!EQUAL@{EQUAL}}}\mbox{\Hypertarget{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44a59a84258a4cb9025b567ee5139455029}\label{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44a59a84258a4cb9025b567ee5139455029}} 
+E\+Q\+U\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GREATER@{GREATER}!zstdtypes.h@{zstdtypes.h}}\index{zstdtypes.h@{zstdtypes.h}!GREATER@{GREATER}}}\mbox{\Hypertarget{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44a25b5ca2f56d99ba6ffcb5316adac34c1}\label{zstdtypes_8h_a3042226c2177e2056fdbd2f821c07f44a25b5ca2f56d99ba6ffcb5316adac34c1}} 
+G\+R\+E\+A\+T\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 78 of file zstdtypes.\+h.
+

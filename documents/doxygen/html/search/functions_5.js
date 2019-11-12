@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['i2c_5fburst_5fread_406',['I2C_burst_read',['../z_i2_c_8c.html#a0fa0e911a9e32593da0a166aea357fc2',1,'I2C_burst_read(I2C_HandleTypeDef i2c_bus, uint8_t i2c_addr, uint8_t start_addr, uint8_t *pvalue, uint16_t size, uint32_t timeout):&#160;zI2C.c'],['../z_i2_c_8h.html#a0fa0e911a9e32593da0a166aea357fc2',1,'I2C_burst_read(I2C_HandleTypeDef i2c_bus, uint8_t i2c_addr, uint8_t start_addr, uint8_t *pvalue, uint16_t size, uint32_t timeout):&#160;zI2C.c']]],
+  ['i2c_5fread_5fregister_407',['I2C_read_register',['../z_i2_c_8c.html#a6cad7b97b577c75964c4b16fad82ba70',1,'I2C_read_register(I2C_HandleTypeDef i2c_bus, uint8_t i2c_addr, uint8_t reg_addr, uint8_t *pvalue, uint32_t timeout):&#160;zI2C.c'],['../z_i2_c_8h.html#a6cad7b97b577c75964c4b16fad82ba70',1,'I2C_read_register(I2C_HandleTypeDef i2c_bus, uint8_t i2c_addr, uint8_t reg_addr, uint8_t *pvalue, uint32_t timeout):&#160;zI2C.c']]],
+  ['i2c_5fwrite_5fregister_408',['I2C_write_register',['../z_i2_c_8c.html#a88d3f564e1be0c504397fc7f6d1a9f76',1,'I2C_write_register(I2C_HandleTypeDef i2c_bus, uint8_t i2c_addr, uint8_t reg_addr, uint8_t value, uint32_t timeout):&#160;zI2C.c'],['../z_i2_c_8h.html#a88d3f564e1be0c504397fc7f6d1a9f76',1,'I2C_write_register(I2C_HandleTypeDef i2c_bus, uint8_t i2c_addr, uint8_t reg_addr, uint8_t value, uint32_t timeout):&#160;zI2C.c']]]
+];

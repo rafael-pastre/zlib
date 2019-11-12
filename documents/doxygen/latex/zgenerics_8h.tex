@@ -1,0 +1,119 @@
+\hypertarget{zgenerics_8h}{}\doxysection{standard/zgenerics.h File Reference}
+\label{zgenerics_8h}\index{standard/zgenerics.h@{standard/zgenerics.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{zgenerics_8h_aacc3ee1a7f283f8ef65cea31f4436a95}{M\+AX}}(x,  y)~(x $>$ y ? x \+: y)
+\item 
+\#define \mbox{\hyperlink{zgenerics_8h_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(x $>$ y ? y \+: x)
+\item 
+\#define \mbox{\hyperlink{zgenerics_8h_aeab9f571b6fe95e8dc99703bfe952898}{I\+S\+\_\+\+M\+A\+I\+U\+S\+C\+U\+LE}}(c)~(\textquotesingle{}A\textquotesingle{} $<$= c \&\& c $<$=\textquotesingle{}Z\textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{zgenerics_8h_a4a8bcbc5b56e8cefa96218e11fdcfe05}{I\+S\+\_\+\+M\+I\+N\+U\+S\+C\+U\+LE}}(c)~(\textquotesingle{}a\textquotesingle{} $<$= c \&\& c $<$=\textquotesingle{}z\textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{zgenerics_8h_ae32cbd6af263ea78fdcc949c17542acb}{I\+S\+\_\+\+A\+S\+C\+I\+I\+\_\+\+L\+E\+T\+T\+ER}}(c)~(\mbox{\hyperlink{zgenerics_8h_aeab9f571b6fe95e8dc99703bfe952898}{I\+S\+\_\+\+M\+A\+I\+U\+S\+C\+U\+LE}}(c) $\vert$$\vert$ \mbox{\hyperlink{zgenerics_8h_a4a8bcbc5b56e8cefa96218e11fdcfe05}{I\+S\+\_\+\+M\+I\+N\+U\+S\+C\+U\+LE}}(c))
+\item 
+\#define \mbox{\hyperlink{zgenerics_8h_a82f292077d978da76affc68c4d83e9bb}{I\+S\+\_\+\+A\+S\+C\+I\+I\+\_\+\+N\+U\+M\+B\+ER}}(c)~(\textquotesingle{}0\textquotesingle{} $<$= c \&\& c $<$= \textquotesingle{}9\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{zgenerics_8h_a35bade36e81412853e62dec1ff1f18eb}{swap}} (void $\ast$pa, void $\ast$pb, size\+\_\+t s)
+\item 
+void \mbox{\hyperlink{zgenerics_8h_a578d60c102600c3755cc37b8a9fcff53}{swap\+\_\+nibbles}} (void $\ast$pa, size\+\_\+t s)
+\item 
+void \mbox{\hyperlink{zgenerics_8h_a63ae48a4accb0cd3b63f535c1bfd97e4}{swap\+\_\+bytes}} (void $\ast$pa, size\+\_\+t s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{zgenerics_8h_ae32cbd6af263ea78fdcc949c17542acb}\label{zgenerics_8h_ae32cbd6af263ea78fdcc949c17542acb}} 
+\index{zgenerics.h@{zgenerics.h}!IS\_ASCII\_LETTER@{IS\_ASCII\_LETTER}}
+\index{IS\_ASCII\_LETTER@{IS\_ASCII\_LETTER}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{IS\_ASCII\_LETTER}{IS\_ASCII\_LETTER}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+A\+S\+C\+I\+I\+\_\+\+L\+E\+T\+T\+ER(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(\mbox{\hyperlink{zgenerics_8h_aeab9f571b6fe95e8dc99703bfe952898}{I\+S\+\_\+\+M\+A\+I\+U\+S\+C\+U\+LE}}(c) $\vert$$\vert$ \mbox{\hyperlink{zgenerics_8h_a4a8bcbc5b56e8cefa96218e11fdcfe05}{I\+S\+\_\+\+M\+I\+N\+U\+S\+C\+U\+LE}}(c))}
+
+
+
+Definition at line 19 of file zgenerics.\+h.
+
+\mbox{\Hypertarget{zgenerics_8h_a82f292077d978da76affc68c4d83e9bb}\label{zgenerics_8h_a82f292077d978da76affc68c4d83e9bb}} 
+\index{zgenerics.h@{zgenerics.h}!IS\_ASCII\_NUMBER@{IS\_ASCII\_NUMBER}}
+\index{IS\_ASCII\_NUMBER@{IS\_ASCII\_NUMBER}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{IS\_ASCII\_NUMBER}{IS\_ASCII\_NUMBER}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+A\+S\+C\+I\+I\+\_\+\+N\+U\+M\+B\+ER(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(\textquotesingle{}0\textquotesingle{} $<$= c \&\& c $<$= \textquotesingle{}9\textquotesingle{})}
+
+
+
+Definition at line 20 of file zgenerics.\+h.
+
+\mbox{\Hypertarget{zgenerics_8h_aeab9f571b6fe95e8dc99703bfe952898}\label{zgenerics_8h_aeab9f571b6fe95e8dc99703bfe952898}} 
+\index{zgenerics.h@{zgenerics.h}!IS\_MAIUSCULE@{IS\_MAIUSCULE}}
+\index{IS\_MAIUSCULE@{IS\_MAIUSCULE}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{IS\_MAIUSCULE}{IS\_MAIUSCULE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+M\+A\+I\+U\+S\+C\+U\+LE(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(\textquotesingle{}A\textquotesingle{} $<$= c \&\& c $<$=\textquotesingle{}Z\textquotesingle{})}
+
+
+
+Definition at line 17 of file zgenerics.\+h.
+
+\mbox{\Hypertarget{zgenerics_8h_a4a8bcbc5b56e8cefa96218e11fdcfe05}\label{zgenerics_8h_a4a8bcbc5b56e8cefa96218e11fdcfe05}} 
+\index{zgenerics.h@{zgenerics.h}!IS\_MINUSCULE@{IS\_MINUSCULE}}
+\index{IS\_MINUSCULE@{IS\_MINUSCULE}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{IS\_MINUSCULE}{IS\_MINUSCULE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+M\+I\+N\+U\+S\+C\+U\+LE(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(\textquotesingle{}a\textquotesingle{} $<$= c \&\& c $<$=\textquotesingle{}z\textquotesingle{})}
+
+
+
+Definition at line 18 of file zgenerics.\+h.
+
+\mbox{\Hypertarget{zgenerics_8h_aacc3ee1a7f283f8ef65cea31f4436a95}\label{zgenerics_8h_aacc3ee1a7f283f8ef65cea31f4436a95}} 
+\index{zgenerics.h@{zgenerics.h}!MAX@{MAX}}
+\index{MAX@{MAX}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define M\+AX(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(x $>$ y ? x \+: y)}
+
+
+
+Definition at line 15 of file zgenerics.\+h.
+
+\mbox{\Hypertarget{zgenerics_8h_a74e75242132eaabbc1c512488a135926}\label{zgenerics_8h_a74e75242132eaabbc1c512488a135926}} 
+\index{zgenerics.h@{zgenerics.h}!MIN@{MIN}}
+\index{MIN@{MIN}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(x $>$ y ? y \+: x)}
+
+
+
+Definition at line 16 of file zgenerics.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{zgenerics_8h_a35bade36e81412853e62dec1ff1f18eb}\label{zgenerics_8h_a35bade36e81412853e62dec1ff1f18eb}} 
+\index{zgenerics.h@{zgenerics.h}!swap@{swap}}
+\index{swap@{swap}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{void $\ast$}]{pa,  }\item[{void $\ast$}]{pb,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file zgenerics.\+c.
+
+\mbox{\Hypertarget{zgenerics_8h_a63ae48a4accb0cd3b63f535c1bfd97e4}\label{zgenerics_8h_a63ae48a4accb0cd3b63f535c1bfd97e4}} 
+\index{zgenerics.h@{zgenerics.h}!swap\_bytes@{swap\_bytes}}
+\index{swap\_bytes@{swap\_bytes}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{swap\_bytes()}{swap\_bytes()}}
+{\footnotesize\ttfamily void swap\+\_\+bytes (\begin{DoxyParamCaption}\item[{void $\ast$}]{pa,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file zgenerics.\+c.
+
+\mbox{\Hypertarget{zgenerics_8h_a578d60c102600c3755cc37b8a9fcff53}\label{zgenerics_8h_a578d60c102600c3755cc37b8a9fcff53}} 
+\index{zgenerics.h@{zgenerics.h}!swap\_nibbles@{swap\_nibbles}}
+\index{swap\_nibbles@{swap\_nibbles}!zgenerics.h@{zgenerics.h}}
+\doxysubsubsection{\texorpdfstring{swap\_nibbles()}{swap\_nibbles()}}
+{\footnotesize\ttfamily void swap\+\_\+nibbles (\begin{DoxyParamCaption}\item[{void $\ast$}]{pa,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})}
+

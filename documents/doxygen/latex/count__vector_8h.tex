@@ -1,0 +1,280 @@
+\hypertarget{count__vector_8h}{}\doxysection{data\+\_\+structures/count\+\_\+vector/count\+\_\+vector.h File Reference}
+\label{count__vector_8h}\index{data\_structures/count\_vector/count\_vector.h@{data\_structures/count\_vector/count\_vector.h}}
+
+
+Library for manipulating an ordered vector of integers with fixed interval.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__count__vector}{\+\_\+count\+\_\+vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{count__vector_8h_a98853a4e080ab5d4d18a60787b14de4c}{C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+S\+O\+LE}}~1
+\item 
+\#define \mbox{\hyperlink{count__vector_8h_af09e30056cc6de4ae5cc6e4bcd4f9eb5}{C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+E\+L\+EM}}~1
+\item 
+\#define \mbox{\hyperlink{count__vector_8h_a6ba4e1c63ab714846381fdd10dc7f106}{C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+M\+IN}}~0
+\item 
+\#define \mbox{\hyperlink{count__vector_8h_ab2e0e6f4553d7121a73c13d8aa7eebb1}{C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+M\+AX}}~0
+\item 
+\#define \mbox{\hyperlink{count__vector_8h_a40d268724fa8e5877b3637773340e773}{C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+\_\+\+E\+L\+E\+M\+E\+N\+TS}}(cv)~(cv-\/$>$elements)
+\item 
+\#define \mbox{\hyperlink{count__vector_8h_a15777925376f791c6f184af7b84e389e}{C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY}}(cv)~((cv-\/$>$elements == 0)?(1)\+:(0))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__count__vector}{\+\_\+count\+\_\+vector}} \mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$ \mbox{\hyperlink{count__vector_8h_ac0fbf2f7107b53372445b1d9ef60e844}{count\+\_\+vector\+\_\+create}} (int initial\+\_\+value, int max\+\_\+value)
+\item 
+void \mbox{\hyperlink{count__vector_8h_aed63ff9e14206b2ff3f98571cd78e307}{count\+\_\+vector\+\_\+exit\+\_\+invalid}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+void \mbox{\hyperlink{count__vector_8h_a25f8f16f649dc6103a323bb4e9a4bbc2}{count\+\_\+vector\+\_\+free}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+void \mbox{\hyperlink{count__vector_8h_a51a2b37c53649c53b3584f2c84ea43d0}{count\+\_\+vector\+\_\+insert}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv, int value)
+\item 
+int \mbox{\hyperlink{count__vector_8h_a540cd97643c7d06a2e9809c5c81cf503}{count\+\_\+vector\+\_\+elements}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+int \mbox{\hyperlink{count__vector_8h_a49912f1df8e403a6586a34d4589f25db}{count\+\_\+vector\+\_\+min}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+int \mbox{\hyperlink{count__vector_8h_a6e245322ed41cc421307849aae9bc86d}{count\+\_\+vector\+\_\+max}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+double \mbox{\hyperlink{count__vector_8h_aa73655be7be026c7e7fcfa152e53d149}{count\+\_\+vector\+\_\+median}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+double \mbox{\hyperlink{count__vector_8h_aa17d70888ad2c2878b291ba5e20f44ac}{count\+\_\+vector\+\_\+mean}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+void \mbox{\hyperlink{count__vector_8h_a8fcdf98b7ea8571bd7b69131b49a29f1}{count\+\_\+vector\+\_\+mean\+\_\+dp}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv, double $\ast$mean, double $\ast$dp)
+\item 
+void \mbox{\hyperlink{count__vector_8h_a1296f6fa4da460a5a7d6907e21f326a6}{count\+\_\+vector\+\_\+merge}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv\+\_\+dest, \mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv\+\_\+src)
+\item 
+void \mbox{\hyperlink{count__vector_8h_a26ffba3f2018506f9493d65de7286716}{printf\+\_\+count\+\_\+vector\+\_\+all}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\item 
+void \mbox{\hyperlink{count__vector_8h_a84929e9ec3d3d43ecdc3d6f69cb6eb6e}{printf\+\_\+count\+\_\+vector}} (\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$cv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Library for manipulating an ordered vector of integers with fixed interval. 
+
+This library implements a count vector which is a vector based on the count sort algorithm.
+
+The structure defined in this library consists in a vector whose positions stores the number of repetitions of the number in the vector. For instance, if a vector v have 47 repetitions of the number 3 then we have v\mbox{[}3\mbox{]} = 47.
+
+Made by\+: Rafael Pastre
+
+Created in\+: 08 nov 2019 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{count__vector_8h_a40d268724fa8e5877b3637773340e773}\label{count__vector_8h_a40d268724fa8e5877b3637773340e773}} 
+\index{count\_vector.h@{count\_vector.h}!COUNT\_VECT\_ELEMENTS@{COUNT\_VECT\_ELEMENTS}}
+\index{COUNT\_VECT\_ELEMENTS@{COUNT\_VECT\_ELEMENTS}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_VECT\_ELEMENTS}{COUNT\_VECT\_ELEMENTS}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+\_\+\+E\+L\+E\+M\+E\+N\+TS(\begin{DoxyParamCaption}\item[{}]{cv }\end{DoxyParamCaption})~(cv-\/$>$elements)}
+
+
+
+Definition at line 50 of file count\+\_\+vector.\+h.
+
+\mbox{\Hypertarget{count__vector_8h_a15777925376f791c6f184af7b84e389e}\label{count__vector_8h_a15777925376f791c6f184af7b84e389e}} 
+\index{count\_vector.h@{count\_vector.h}!COUNT\_VECT\_IS\_EMPTY@{COUNT\_VECT\_IS\_EMPTY}}
+\index{COUNT\_VECT\_IS\_EMPTY@{COUNT\_VECT\_IS\_EMPTY}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_VECT\_IS\_EMPTY}{COUNT\_VECT\_IS\_EMPTY}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY(\begin{DoxyParamCaption}\item[{}]{cv }\end{DoxyParamCaption})~((cv-\/$>$elements == 0)?(1)\+:(0))}
+
+
+
+Definition at line 52 of file count\+\_\+vector.\+h.
+
+\mbox{\Hypertarget{count__vector_8h_a98853a4e080ab5d4d18a60787b14de4c}\label{count__vector_8h_a98853a4e080ab5d4d18a60787b14de4c}} 
+\index{count\_vector.h@{count\_vector.h}!COUNT\_VECTOR\_OPT\_CONSOLE@{COUNT\_VECTOR\_OPT\_CONSOLE}}
+\index{COUNT\_VECTOR\_OPT\_CONSOLE@{COUNT\_VECTOR\_OPT\_CONSOLE}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_VECTOR\_OPT\_CONSOLE}{COUNT\_VECTOR\_OPT\_CONSOLE}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+S\+O\+LE~1}
+
+
+
+Definition at line 20 of file count\+\_\+vector.\+h.
+
+\mbox{\Hypertarget{count__vector_8h_af09e30056cc6de4ae5cc6e4bcd4f9eb5}\label{count__vector_8h_af09e30056cc6de4ae5cc6e4bcd4f9eb5}} 
+\index{count\_vector.h@{count\_vector.h}!COUNT\_VECTOR\_OPT\_STORE\_ELEM@{COUNT\_VECTOR\_OPT\_STORE\_ELEM}}
+\index{COUNT\_VECTOR\_OPT\_STORE\_ELEM@{COUNT\_VECTOR\_OPT\_STORE\_ELEM}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_VECTOR\_OPT\_STORE\_ELEM}{COUNT\_VECTOR\_OPT\_STORE\_ELEM}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+E\+L\+EM~1}
+
+
+
+Definition at line 21 of file count\+\_\+vector.\+h.
+
+\mbox{\Hypertarget{count__vector_8h_ab2e0e6f4553d7121a73c13d8aa7eebb1}\label{count__vector_8h_ab2e0e6f4553d7121a73c13d8aa7eebb1}} 
+\index{count\_vector.h@{count\_vector.h}!COUNT\_VECTOR\_OPT\_STORE\_MAX@{COUNT\_VECTOR\_OPT\_STORE\_MAX}}
+\index{COUNT\_VECTOR\_OPT\_STORE\_MAX@{COUNT\_VECTOR\_OPT\_STORE\_MAX}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_VECTOR\_OPT\_STORE\_MAX}{COUNT\_VECTOR\_OPT\_STORE\_MAX}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+M\+AX~0}
+
+
+
+Definition at line 23 of file count\+\_\+vector.\+h.
+
+\mbox{\Hypertarget{count__vector_8h_a6ba4e1c63ab714846381fdd10dc7f106}\label{count__vector_8h_a6ba4e1c63ab714846381fdd10dc7f106}} 
+\index{count\_vector.h@{count\_vector.h}!COUNT\_VECTOR\_OPT\_STORE\_MIN@{COUNT\_VECTOR\_OPT\_STORE\_MIN}}
+\index{COUNT\_VECTOR\_OPT\_STORE\_MIN@{COUNT\_VECTOR\_OPT\_STORE\_MIN}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_VECTOR\_OPT\_STORE\_MIN}{COUNT\_VECTOR\_OPT\_STORE\_MIN}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+P\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+M\+IN~0}
+
+
+
+Definition at line 22 of file count\+\_\+vector.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}\label{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector@{count\_vector}}
+\index{count\_vector@{count\_vector}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector}{count\_vector}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__count__vector}{\+\_\+count\+\_\+vector}} \mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{count__vector_8h_ac0fbf2f7107b53372445b1d9ef60e844}\label{count__vector_8h_ac0fbf2f7107b53372445b1d9ef60e844}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_create@{count\_vector\_create}}
+\index{count\_vector\_create@{count\_vector\_create}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_create()}{count\_vector\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}}$\ast$ count\+\_\+vector\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{initial\+\_\+value,  }\item[{int}]{max\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a540cd97643c7d06a2e9809c5c81cf503}\label{count__vector_8h_a540cd97643c7d06a2e9809c5c81cf503}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_elements@{count\_vector\_elements}}
+\index{count\_vector\_elements@{count\_vector\_elements}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_elements()}{count\_vector\_elements()}}
+{\footnotesize\ttfamily int count\+\_\+vector\+\_\+elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_aed63ff9e14206b2ff3f98571cd78e307}\label{count__vector_8h_aed63ff9e14206b2ff3f98571cd78e307}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_exit\_invalid@{count\_vector\_exit\_invalid}}
+\index{count\_vector\_exit\_invalid@{count\_vector\_exit\_invalid}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_exit\_invalid()}{count\_vector\_exit\_invalid()}}
+{\footnotesize\ttfamily void count\+\_\+vector\+\_\+exit\+\_\+invalid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a25f8f16f649dc6103a323bb4e9a4bbc2}\label{count__vector_8h_a25f8f16f649dc6103a323bb4e9a4bbc2}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_free@{count\_vector\_free}}
+\index{count\_vector\_free@{count\_vector\_free}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_free()}{count\_vector\_free()}}
+{\footnotesize\ttfamily void count\+\_\+vector\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a51a2b37c53649c53b3584f2c84ea43d0}\label{count__vector_8h_a51a2b37c53649c53b3584f2c84ea43d0}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_insert@{count\_vector\_insert}}
+\index{count\_vector\_insert@{count\_vector\_insert}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_insert()}{count\_vector\_insert()}}
+{\footnotesize\ttfamily void count\+\_\+vector\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a6e245322ed41cc421307849aae9bc86d}\label{count__vector_8h_a6e245322ed41cc421307849aae9bc86d}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_max@{count\_vector\_max}}
+\index{count\_vector\_max@{count\_vector\_max}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_max()}{count\_vector\_max()}}
+{\footnotesize\ttfamily int count\+\_\+vector\+\_\+max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_aa17d70888ad2c2878b291ba5e20f44ac}\label{count__vector_8h_aa17d70888ad2c2878b291ba5e20f44ac}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_mean@{count\_vector\_mean}}
+\index{count\_vector\_mean@{count\_vector\_mean}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_mean()}{count\_vector\_mean()}}
+{\footnotesize\ttfamily double count\+\_\+vector\+\_\+mean (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 166 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a8fcdf98b7ea8571bd7b69131b49a29f1}\label{count__vector_8h_a8fcdf98b7ea8571bd7b69131b49a29f1}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_mean\_dp@{count\_vector\_mean\_dp}}
+\index{count\_vector\_mean\_dp@{count\_vector\_mean\_dp}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_mean\_dp()}{count\_vector\_mean\_dp()}}
+{\footnotesize\ttfamily void count\+\_\+vector\+\_\+mean\+\_\+dp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv,  }\item[{double $\ast$}]{mean,  }\item[{double $\ast$}]{dp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_aa73655be7be026c7e7fcfa152e53d149}\label{count__vector_8h_aa73655be7be026c7e7fcfa152e53d149}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_median@{count\_vector\_median}}
+\index{count\_vector\_median@{count\_vector\_median}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_median()}{count\_vector\_median()}}
+{\footnotesize\ttfamily double count\+\_\+vector\+\_\+median (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a1296f6fa4da460a5a7d6907e21f326a6}\label{count__vector_8h_a1296f6fa4da460a5a7d6907e21f326a6}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_merge@{count\_vector\_merge}}
+\index{count\_vector\_merge@{count\_vector\_merge}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_merge()}{count\_vector\_merge()}}
+{\footnotesize\ttfamily void count\+\_\+vector\+\_\+merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv\+\_\+dest,  }\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv\+\_\+src }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a49912f1df8e403a6586a34d4589f25db}\label{count__vector_8h_a49912f1df8e403a6586a34d4589f25db}} 
+\index{count\_vector.h@{count\_vector.h}!count\_vector\_min@{count\_vector\_min}}
+\index{count\_vector\_min@{count\_vector\_min}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{count\_vector\_min()}{count\_vector\_min()}}
+{\footnotesize\ttfamily int count\+\_\+vector\+\_\+min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a84929e9ec3d3d43ecdc3d6f69cb6eb6e}\label{count__vector_8h_a84929e9ec3d3d43ecdc3d6f69cb6eb6e}} 
+\index{count\_vector.h@{count\_vector.h}!printf\_count\_vector@{printf\_count\_vector}}
+\index{printf\_count\_vector@{printf\_count\_vector}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{printf\_count\_vector()}{printf\_count\_vector()}}
+{\footnotesize\ttfamily void printf\+\_\+count\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file count\+\_\+vector.\+c.
+
+\mbox{\Hypertarget{count__vector_8h_a26ffba3f2018506f9493d65de7286716}\label{count__vector_8h_a26ffba3f2018506f9493d65de7286716}} 
+\index{count\_vector.h@{count\_vector.h}!printf\_count\_vector\_all@{printf\_count\_vector\_all}}
+\index{printf\_count\_vector\_all@{printf\_count\_vector\_all}!count\_vector.h@{count\_vector.h}}
+\doxysubsubsection{\texorpdfstring{printf\_count\_vector\_all()}{printf\_count\_vector\_all()}}
+{\footnotesize\ttfamily void printf\+\_\+count\+\_\+vector\+\_\+all (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{count__vector_8h_aed3e0fb14ba7d100abf6c1d9892e4447}{count\+\_\+vector}} $\ast$}]{cv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 216 of file count\+\_\+vector.\+c.
+

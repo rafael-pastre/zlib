@@ -1,0 +1,61 @@
+This program generates files filled with random data\hypertarget{md_utilities_random_data_generator_readme_autotoc_md11}{}\doxysection{How to use\+:}\label{md_utilities_random_data_generator_readme_autotoc_md11}
+
+\begin{DoxyItemize}
+\item compilation command\+: make all
+\item execution command\+: make run
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md12}{}\doxysection{Configurations macros\+:}\label{md_utilities_random_data_generator_readme_autotoc_md12}
+Program configurations can be altered in random\+\_\+data\+\_\+generator.\+cfg file.\hypertarget{md_utilities_random_data_generator_readme_autotoc_md13}{}\doxysubsection{R\+E\+A\+D\+\_\+\+F\+I\+L\+E\+\_\+\+I\+N\+P\+UT}\label{md_utilities_random_data_generator_readme_autotoc_md13}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+R\+E\+A\+D\+\_\+\+F\+I\+L\+E\+\_\+\+I\+N\+P\+U\+T \textbackslash{}$<$bool\textbackslash{}$>$\char`\"{}.
+\item If this option is set to T\+R\+UE, the program will get it\textquotesingle{}s inputs from a file. The path and file name must be inserted at execution time.
+\item default value = F\+A\+L\+SE.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md14}{}\doxysubsection{S\+E\+T\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE}\label{md_utilities_random_data_generator_readme_autotoc_md14}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+S\+E\+T\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+L\+E \textbackslash{}$<$/path/file\+\_\+name\textbackslash{}$>$\char`\"{}.
+\item If this macro is used, \char`\"{}\+R\+E\+A\+D\+\_\+\+F\+I\+L\+E\+\_\+\+I\+N\+P\+U\+T\char`\"{} will be considered false, even if it\textquotesingle{}s declared in config file.
+\item this macro is interpreted as a command, therefore it doesn\textquotesingle{}t have a default value.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md15}{}\doxysubsection{R\+E\+A\+D\+\_\+\+F\+I\+L\+E\+\_\+\+O\+U\+T\+P\+UT}\label{md_utilities_random_data_generator_readme_autotoc_md15}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+R\+E\+A\+D\+\_\+\+F\+I\+L\+E\+\_\+\+O\+U\+T\+P\+U\+T \textbackslash{}$<$bool\textbackslash{}$>$\char`\"{}.
+\item If this option is set to T\+R\+UE, the program will send it\textquotesingle{}s output from a specified file. The path and file name must be inserted at execution time.
+\item default value = F\+A\+L\+SE.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md16}{}\doxysubsection{S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}\label{md_utilities_random_data_generator_readme_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+L\+E \textbackslash{}$<$/path/file\+\_\+name\textbackslash{}$>$\char`\"{}.
+\item If this macro is used, \char`\"{}\+R\+E\+A\+D\+\_\+\+F\+I\+L\+E\+\_\+\+O\+U\+T\+P\+U\+T\char`\"{} will be considered false, even if it\textquotesingle{}s declared in config file.
+\item this macro is interpreted as a command, therefore it doesn\textquotesingle{}t have a default value.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md17}{}\doxysubsection{R\+E\+A\+D\+\_\+\+S\+E\+ED}\label{md_utilities_random_data_generator_readme_autotoc_md17}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+R\+E\+A\+D\+\_\+\+S\+E\+E\+D \textbackslash{}$<$bool\textbackslash{}$>$\char`\"{}.
+\item If this option is changed to T\+R\+UE, a new seed must be inserted at execution time. If this option is set to F\+A\+L\+SE, the seed for random function will be \char`\"{}time(\+N\+U\+L\+L)\char`\"{} or the value passed in \char`\"{}\+S\+E\+T\+\_\+\+S\+E\+E\+D\char`\"{} macro.
+\item default value = F\+A\+L\+SE.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md18}{}\doxysubsection{S\+E\+T\+\_\+\+S\+E\+ED}\label{md_utilities_random_data_generator_readme_autotoc_md18}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+S\+E\+T\+\_\+\+S\+E\+E\+D \textbackslash{}$<$integer\+\_\+value\textbackslash{}$>$\char`\"{}.
+\item Sets the seed for random function with the value specificated.
+\item If this macro is used, \char`\"{}\+R\+E\+A\+D\+\_\+\+S\+E\+E\+D\char`\"{} will be considered false, even if it\textquotesingle{}s declared in config file.
+\item this macro is interpreted as a command, therefore it doesn\textquotesingle{}t have a default value.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md19}{}\doxysubsection{P\+R\+I\+N\+T\+\_\+\+D\+IM}\label{md_utilities_random_data_generator_readme_autotoc_md19}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+P\+R\+I\+N\+T\+\_\+\+D\+I\+M \textbackslash{}$<$style\textbackslash{}$>$\char`\"{}
+\item $<$style$>$ is an integer value.
+\begin{DoxyItemize}
+\item If $<$style$>$ = 0, no dimension will be printed.
+\item If $<$style$>$ = 1, dimensions will be printed separeted by a space.
+\item If $<$style$>$ = 2, dimensions will be printed separeted by a new line.
+\end{DoxyItemize}
+\item default value = 0.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md20}{}\doxysubsection{R\+E\+A\+D\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+N\+UM}\label{md_utilities_random_data_generator_readme_autotoc_md20}
+
+\begin{DoxyItemize}
+\item Syntax\+: \char`\"{}\+R\+E\+A\+D\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+N\+U\+M \textbackslash{}$<$bool\textbackslash{}$>$\char`\"{}.
+\item default value = F\+A\+L\+SE.
+\item default number of blocks = 1.
+\end{DoxyItemize}\hypertarget{md_utilities_random_data_generator_readme_autotoc_md21}{}\doxysubsection{S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+N\+UM}\label{md_utilities_random_data_generator_readme_autotoc_md21}

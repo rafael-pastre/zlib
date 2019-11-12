@@ -1,0 +1,109 @@
+\hypertarget{zdebug_8h}{}\doxysection{standard/zdebug.h File Reference}
+\label{zdebug_8h}\index{standard/zdebug.h@{standard/zdebug.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{zdebug_8h_aff073034e9225a5f348d5e64c001d90a}{P\+R\+O\+C\+E\+S\+S\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}~\char`\"{}Falha no processamento do arquivo.\char`\"{}
+\item 
+\#define \mbox{\hyperlink{zdebug_8h_afb3e9fe410f6896c50ebae508d894c77}{F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}~\char`\"{}Falha no carregamento do arquivo.\char`\"{}
+\item 
+\#define \mbox{\hyperlink{zdebug_8h_ae5a68258ce73d7032b2535e8965ef1ba}{F\+U\+N\+C\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}~\char`\"{}Error\+: invalid functionality inserted.\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{zdebug_8h_afe4293ee737146c349447d9fea9d170e}{R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}~\char`\"{}Erro de leitura.\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{zdebug_8h_acc004d5b6ee9e8ecb279b41285914b43}{dprintf}} (int tag, const char $\ast$format\+\_\+str,...)
+\item 
+int \mbox{\hyperlink{zdebug_8h_ad05f15acbd6fb4763048e6974e83b8bb}{debug\+\_\+ascii\+\_\+file}} (int tag, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{zdebug_8h_ac21a476e49032528de23bb7d17486cb0}{exit\+\_\+if\+\_\+null}} (void $\ast$p)
+\item 
+void \mbox{\hyperlink{zdebug_8h_a2e23568d0903b1ed04b403bf31c9780c}{mexit\+\_\+if\+\_\+null}} (void $\ast$p, const char $\ast$error\+\_\+message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{zdebug_8h_afb3e9fe410f6896c50ebae508d894c77}\label{zdebug_8h_afb3e9fe410f6896c50ebae508d894c77}} 
+\index{zdebug.h@{zdebug.h}!FILE\_ERROR\_MSG@{FILE\_ERROR\_MSG}}
+\index{FILE\_ERROR\_MSG@{FILE\_ERROR\_MSG}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_ERROR\_MSG}{FILE\_ERROR\_MSG}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG~\char`\"{}Falha no carregamento do arquivo.\char`\"{}}
+
+
+
+Definition at line 21 of file zdebug.\+h.
+
+\mbox{\Hypertarget{zdebug_8h_ae5a68258ce73d7032b2535e8965ef1ba}\label{zdebug_8h_ae5a68258ce73d7032b2535e8965ef1ba}} 
+\index{zdebug.h@{zdebug.h}!FUNCT\_ERROR\_MSG@{FUNCT\_ERROR\_MSG}}
+\index{FUNCT\_ERROR\_MSG@{FUNCT\_ERROR\_MSG}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{FUNCT\_ERROR\_MSG}{FUNCT\_ERROR\_MSG}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG~\char`\"{}Error\+: invalid functionality inserted.\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 22 of file zdebug.\+h.
+
+\mbox{\Hypertarget{zdebug_8h_aff073034e9225a5f348d5e64c001d90a}\label{zdebug_8h_aff073034e9225a5f348d5e64c001d90a}} 
+\index{zdebug.h@{zdebug.h}!PROCESS\_ERROR\_MSG@{PROCESS\_ERROR\_MSG}}
+\index{PROCESS\_ERROR\_MSG@{PROCESS\_ERROR\_MSG}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{PROCESS\_ERROR\_MSG}{PROCESS\_ERROR\_MSG}}
+{\footnotesize\ttfamily \#define P\+R\+O\+C\+E\+S\+S\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG~\char`\"{}Falha no processamento do arquivo.\char`\"{}}
+
+
+
+Definition at line 20 of file zdebug.\+h.
+
+\mbox{\Hypertarget{zdebug_8h_afe4293ee737146c349447d9fea9d170e}\label{zdebug_8h_afe4293ee737146c349447d9fea9d170e}} 
+\index{zdebug.h@{zdebug.h}!READING\_ERROR\_MSG@{READING\_ERROR\_MSG}}
+\index{READING\_ERROR\_MSG@{READING\_ERROR\_MSG}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{READING\_ERROR\_MSG}{READING\_ERROR\_MSG}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG~\char`\"{}Erro de leitura.\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 23 of file zdebug.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{zdebug_8h_ad05f15acbd6fb4763048e6974e83b8bb}\label{zdebug_8h_ad05f15acbd6fb4763048e6974e83b8bb}} 
+\index{zdebug.h@{zdebug.h}!debug\_ascii\_file@{debug\_ascii\_file}}
+\index{debug\_ascii\_file@{debug\_ascii\_file}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{debug\_ascii\_file()}{debug\_ascii\_file()}}
+{\footnotesize\ttfamily int debug\+\_\+ascii\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{tag,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file zdebug.\+c.
+
+\mbox{\Hypertarget{zdebug_8h_acc004d5b6ee9e8ecb279b41285914b43}\label{zdebug_8h_acc004d5b6ee9e8ecb279b41285914b43}} 
+\index{zdebug.h@{zdebug.h}!dprintf@{dprintf}}
+\index{dprintf@{dprintf}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{dprintf()}{dprintf()}}
+{\footnotesize\ttfamily int dprintf (\begin{DoxyParamCaption}\item[{int}]{tag,  }\item[{const char $\ast$}]{format\+\_\+str,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file zdebug.\+c.
+
+\mbox{\Hypertarget{zdebug_8h_ac21a476e49032528de23bb7d17486cb0}\label{zdebug_8h_ac21a476e49032528de23bb7d17486cb0}} 
+\index{zdebug.h@{zdebug.h}!exit\_if\_null@{exit\_if\_null}}
+\index{exit\_if\_null@{exit\_if\_null}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{exit\_if\_null()}{exit\_if\_null()}}
+{\footnotesize\ttfamily void exit\+\_\+if\+\_\+null (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file zdebug.\+c.
+
+\mbox{\Hypertarget{zdebug_8h_a2e23568d0903b1ed04b403bf31c9780c}\label{zdebug_8h_a2e23568d0903b1ed04b403bf31c9780c}} 
+\index{zdebug.h@{zdebug.h}!mexit\_if\_null@{mexit\_if\_null}}
+\index{mexit\_if\_null@{mexit\_if\_null}!zdebug.h@{zdebug.h}}
+\doxysubsubsection{\texorpdfstring{mexit\_if\_null()}{mexit\_if\_null()}}
+{\footnotesize\ttfamily void mexit\+\_\+if\+\_\+null (\begin{DoxyParamCaption}\item[{void $\ast$}]{p,  }\item[{const char $\ast$}]{error\+\_\+message }\end{DoxyParamCaption})}
+

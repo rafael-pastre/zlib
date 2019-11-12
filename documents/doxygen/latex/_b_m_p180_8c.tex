@@ -1,0 +1,117 @@
+\hypertarget{_b_m_p180_8c}{}\doxysection{stm32/\+B\+M\+P180.c File Reference}
+\label{_b_m_p180_8c}\index{stm32/BMP180.c@{stm32/BMP180.c}}
+{\ttfamily \#include \char`\"{}B\+M\+P180.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_b_m_p180_8c_af0d619f7b623a254b87af28d1a0c3b25}{R\+E\+A\+D\+\_\+\+R\+EG}}(i2c\+\_\+bus,  reg\+\_\+addr,  pvalue)
+\item 
+\#define \mbox{\hyperlink{_b_m_p180_8c_a835c6f31a10dfcd05d62de90c3d41f6d}{B\+U\+R\+S\+T\+\_\+\+R\+E\+AD}}(i2c\+\_\+bus,  start\+\_\+addr,  pvalue,  size)
+\item 
+\#define \mbox{\hyperlink{_b_m_p180_8c_a981b2b8545d627475bfc0a846a3dad5f}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}(i2c\+\_\+bus,  reg\+\_\+addr,  value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p180_8c_a8a93ce65c48ea312c9706961e4bd9143}{B\+M\+P180\+\_\+init}} (\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$sensor, I2\+C\+\_\+\+Handle\+Type\+Def i2c\+\_\+bus, uint8\+\_\+t sensor\+\_\+version)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p180_8c_a105f342b690affbd14f67f78daeba002}{B\+M\+P180\+\_\+read\+\_\+temperature}} (\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p180_8c_a390c27f52cc8ba6548884ad7417b4658}{B\+M\+P180\+\_\+read\+\_\+pressure}} (\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$sensor, uint8\+\_\+t oss)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p180_8c_aec873e9be1c5b601ab0ec48ea723680e}{B\+M\+P180\+\_\+read\+\_\+altitude}} (\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$sensor, uint8\+\_\+t oss)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_b_m_p180_8c_a835c6f31a10dfcd05d62de90c3d41f6d}\label{_b_m_p180_8c_a835c6f31a10dfcd05d62de90c3d41f6d}} 
+\index{BMP180.c@{BMP180.c}!BURST\_READ@{BURST\_READ}}
+\index{BURST\_READ@{BURST\_READ}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{BURST\_READ}{BURST\_READ}}
+{\footnotesize\ttfamily \#define B\+U\+R\+S\+T\+\_\+\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{start\+\_\+addr,  }\item[{}]{pvalue,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{HAL\_StatusTypeDef \mbox{\hyperlink{z_i2_c_8c_a0fa0e911a9e32593da0a166aea357fc2}{I2C\_burst\_read}}(i2c\_bus, \mbox{\hyperlink{_b_m_p180_8h_ad668cff49b7688857e73921f67fe6e1b}{BMP180\_I2C\_ADDR}}, start\_addr, pvalue, size, \mbox{\hyperlink{_b_m_p180_8h_a5da53b5f114170a4b2c9378a1af80a94}{BMP180\_TIMEOUT}});}
+
+\end{DoxyCode}
+
+
+Definition at line 14 of file B\+M\+P180.\+c.
+
+\mbox{\Hypertarget{_b_m_p180_8c_af0d619f7b623a254b87af28d1a0c3b25}\label{_b_m_p180_8c_af0d619f7b623a254b87af28d1a0c3b25}} 
+\index{BMP180.c@{BMP180.c}!READ\_REG@{READ\_REG}}
+\index{READ\_REG@{READ\_REG}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{READ\_REG}{READ\_REG}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{reg\+\_\+addr,  }\item[{}]{pvalue }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{HAL\_StatusTypeDef \mbox{\hyperlink{z_i2_c_8c_a6cad7b97b577c75964c4b16fad82ba70}{I2C\_read\_register}}(i2c\_bus, \mbox{\hyperlink{_b_m_p180_8h_ad668cff49b7688857e73921f67fe6e1b}{BMP180\_I2C\_ADDR}}, reg\_addr, pvalue, \mbox{\hyperlink{_b_m_p180_8h_a5da53b5f114170a4b2c9378a1af80a94}{BMP180\_TIMEOUT}});}
+
+\end{DoxyCode}
+
+
+Definition at line 11 of file B\+M\+P180.\+c.
+
+\mbox{\Hypertarget{_b_m_p180_8c_a981b2b8545d627475bfc0a846a3dad5f}\label{_b_m_p180_8c_a981b2b8545d627475bfc0a846a3dad5f}} 
+\index{BMP180.c@{BMP180.c}!WRITE\_REG@{WRITE\_REG}}
+\index{WRITE\_REG@{WRITE\_REG}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{WRITE\_REG}{WRITE\_REG}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{reg\+\_\+addr,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{HAL\_StatusTypeDef \mbox{\hyperlink{z_i2_c_8c_a88d3f564e1be0c504397fc7f6d1a9f76}{I2C\_write\_register}}(i2c\_bus, \mbox{\hyperlink{_b_m_p180_8h_ad668cff49b7688857e73921f67fe6e1b}{BMP180\_I2C\_ADDR}}, reg\_addr, value, \mbox{\hyperlink{_b_m_p180_8h_a5da53b5f114170a4b2c9378a1af80a94}{BMP180\_TIMEOUT}});}
+
+\end{DoxyCode}
+
+
+Definition at line 17 of file B\+M\+P180.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_b_m_p180_8c_a8a93ce65c48ea312c9706961e4bd9143}\label{_b_m_p180_8c_a8a93ce65c48ea312c9706961e4bd9143}} 
+\index{BMP180.c@{BMP180.c}!BMP180\_init@{BMP180\_init}}
+\index{BMP180\_init@{BMP180\_init}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{BMP180\_init()}{BMP180\_init()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P180\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$}]{sensor,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{sensor\+\_\+version }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file B\+M\+P180.\+c.
+
+\mbox{\Hypertarget{_b_m_p180_8c_aec873e9be1c5b601ab0ec48ea723680e}\label{_b_m_p180_8c_aec873e9be1c5b601ab0ec48ea723680e}} 
+\index{BMP180.c@{BMP180.c}!BMP180\_read\_altitude@{BMP180\_read\_altitude}}
+\index{BMP180\_read\_altitude@{BMP180\_read\_altitude}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{BMP180\_read\_altitude()}{BMP180\_read\_altitude()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P180\+\_\+read\+\_\+altitude (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{oss }\end{DoxyParamCaption})}
+
+
+
+Definition at line 254 of file B\+M\+P180.\+c.
+
+\mbox{\Hypertarget{_b_m_p180_8c_a390c27f52cc8ba6548884ad7417b4658}\label{_b_m_p180_8c_a390c27f52cc8ba6548884ad7417b4658}} 
+\index{BMP180.c@{BMP180.c}!BMP180\_read\_pressure@{BMP180\_read\_pressure}}
+\index{BMP180\_read\_pressure@{BMP180\_read\_pressure}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{BMP180\_read\_pressure()}{BMP180\_read\_pressure()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P180\+\_\+read\+\_\+pressure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{oss }\end{DoxyParamCaption})}
+
+
+
+Definition at line 147 of file B\+M\+P180.\+c.
+
+\mbox{\Hypertarget{_b_m_p180_8c_a105f342b690affbd14f67f78daeba002}\label{_b_m_p180_8c_a105f342b690affbd14f67f78daeba002}} 
+\index{BMP180.c@{BMP180.c}!BMP180\_read\_temperature@{BMP180\_read\_temperature}}
+\index{BMP180\_read\_temperature@{BMP180\_read\_temperature}!BMP180.c@{BMP180.c}}
+\doxysubsubsection{\texorpdfstring{BMP180\_read\_temperature()}{BMP180\_read\_temperature()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P180\+\_\+read\+\_\+temperature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p180_8h_a2276e4eca3ce7fd46c85c1bc27b5a07c}{B\+M\+P180}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file B\+M\+P180.\+c.
+

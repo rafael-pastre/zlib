@@ -1,0 +1,62 @@
+\hypertarget{_i2_c__macro__template_8h}{}\doxysection{stm32/\+I2\+C\+\_\+macro\+\_\+template.h File Reference}
+\label{_i2_c__macro__template_8h}\index{stm32/I2C\_macro\_template.h@{stm32/I2C\_macro\_template.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_i2_c__macro__template_8h_af0d619f7b623a254b87af28d1a0c3b25}{R\+E\+A\+D\+\_\+\+R\+EG}}(i2c\+\_\+bus,  reg\+\_\+addr,  pvalue)
+\item 
+\#define \mbox{\hyperlink{_i2_c__macro__template_8h_a835c6f31a10dfcd05d62de90c3d41f6d}{B\+U\+R\+S\+T\+\_\+\+R\+E\+AD}}(i2c\+\_\+bus,  start\+\_\+addr,  pvalue,  size)
+\item 
+\#define \mbox{\hyperlink{_i2_c__macro__template_8h_a981b2b8545d627475bfc0a846a3dad5f}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}(i2c\+\_\+bus,  reg\+\_\+addr,  value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_i2_c__macro__template_8h_a835c6f31a10dfcd05d62de90c3d41f6d}\label{_i2_c__macro__template_8h_a835c6f31a10dfcd05d62de90c3d41f6d}} 
+\index{I2C\_macro\_template.h@{I2C\_macro\_template.h}!BURST\_READ@{BURST\_READ}}
+\index{BURST\_READ@{BURST\_READ}!I2C\_macro\_template.h@{I2C\_macro\_template.h}}
+\doxysubsubsection{\texorpdfstring{BURST\_READ}{BURST\_READ}}
+{\footnotesize\ttfamily \#define B\+U\+R\+S\+T\+\_\+\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{start\+\_\+addr,  }\item[{}]{pvalue,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{HAL\_StatusTypeDef \mbox{\hyperlink{z_i2_c_8c_a0fa0e911a9e32593da0a166aea357fc2}{I2C\_burst\_read}}(i2c\_bus, \mbox{\hyperlink{_b_m_p280_8h_aa58a90f8c2ec9ac45d8b345f91fdfab1}{BMP280\_I2C\_ADDR}}, start\_addr, pvalue, size, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{BMP280\_TIMEOUT}});}
+
+\end{DoxyCode}
+
+
+Definition at line 4 of file I2\+C\+\_\+macro\+\_\+template.\+h.
+
+\mbox{\Hypertarget{_i2_c__macro__template_8h_af0d619f7b623a254b87af28d1a0c3b25}\label{_i2_c__macro__template_8h_af0d619f7b623a254b87af28d1a0c3b25}} 
+\index{I2C\_macro\_template.h@{I2C\_macro\_template.h}!READ\_REG@{READ\_REG}}
+\index{READ\_REG@{READ\_REG}!I2C\_macro\_template.h@{I2C\_macro\_template.h}}
+\doxysubsubsection{\texorpdfstring{READ\_REG}{READ\_REG}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{reg\+\_\+addr,  }\item[{}]{pvalue }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{HAL\_StatusTypeDef \mbox{\hyperlink{z_i2_c_8c_a6cad7b97b577c75964c4b16fad82ba70}{I2C\_read\_register}}(i2c\_bus, \mbox{\hyperlink{_b_m_p280_8h_aa58a90f8c2ec9ac45d8b345f91fdfab1}{BMP280\_I2C\_ADDR}}, reg\_addr, pvalue, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{BMP280\_TIMEOUT}});}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file I2\+C\+\_\+macro\+\_\+template.\+h.
+
+\mbox{\Hypertarget{_i2_c__macro__template_8h_a981b2b8545d627475bfc0a846a3dad5f}\label{_i2_c__macro__template_8h_a981b2b8545d627475bfc0a846a3dad5f}} 
+\index{I2C\_macro\_template.h@{I2C\_macro\_template.h}!WRITE\_REG@{WRITE\_REG}}
+\index{WRITE\_REG@{WRITE\_REG}!I2C\_macro\_template.h@{I2C\_macro\_template.h}}
+\doxysubsubsection{\texorpdfstring{WRITE\_REG}{WRITE\_REG}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{reg\+\_\+addr,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\(\backslash\)}
+\DoxyCodeLine{HAL\_StatusTypeDef \mbox{\hyperlink{z_i2_c_8c_a88d3f564e1be0c504397fc7f6d1a9f76}{I2C\_write\_register}}(i2c\_bus, \mbox{\hyperlink{_b_m_p280_8h_aa58a90f8c2ec9ac45d8b345f91fdfab1}{BMP280\_I2C\_ADDR}}, reg\_addr, value, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{BMP280\_TIMEOUT}});}
+
+\end{DoxyCode}
+
+
+Definition at line 7 of file I2\+C\+\_\+macro\+\_\+template.\+h.
+

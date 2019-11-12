@@ -1,0 +1,75 @@
+\hypertarget{z_i2_c_8h}{}\doxysection{stm32/z\+I2C.h File Reference}
+\label{z_i2_c_8h}\index{stm32/zI2C.h@{stm32/zI2C.h}}
+{\ttfamily \#include \char`\"{}zstm32.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{z_i2_c_8h_ab5238e25a213ea6072c31394a520a38b}{I2\+C\+\_\+\+A\+D\+D\+R\+\_\+R}}(addr)~(addr$\vert$0b00000001)
+\item 
+\#define \mbox{\hyperlink{z_i2_c_8h_ad1b09871b6103a380325b342dcdee270}{I2\+C\+\_\+\+A\+D\+D\+R\+\_\+W}}(addr)~(addr\&0b11111110)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{z_i2_c_8h_a6cad7b97b577c75964c4b16fad82ba70}{I2\+C\+\_\+read\+\_\+register}} (I2\+C\+\_\+\+Handle\+Type\+Def i2c\+\_\+bus, uint8\+\_\+t i2c\+\_\+addr, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$pvalue, uint32\+\_\+t timeout)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{z_i2_c_8h_a0fa0e911a9e32593da0a166aea357fc2}{I2\+C\+\_\+burst\+\_\+read}} (I2\+C\+\_\+\+Handle\+Type\+Def i2c\+\_\+bus, uint8\+\_\+t i2c\+\_\+addr, uint8\+\_\+t start\+\_\+addr, uint8\+\_\+t $\ast$pvalue, uint16\+\_\+t size, uint32\+\_\+t timeout)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{z_i2_c_8h_a88d3f564e1be0c504397fc7f6d1a9f76}{I2\+C\+\_\+write\+\_\+register}} (I2\+C\+\_\+\+Handle\+Type\+Def i2c\+\_\+bus, uint8\+\_\+t i2c\+\_\+addr, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t value, uint32\+\_\+t timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{z_i2_c_8h_ab5238e25a213ea6072c31394a520a38b}\label{z_i2_c_8h_ab5238e25a213ea6072c31394a520a38b}} 
+\index{zI2C.h@{zI2C.h}!I2C\_ADDR\_R@{I2C\_ADDR\_R}}
+\index{I2C\_ADDR\_R@{I2C\_ADDR\_R}!zI2C.h@{zI2C.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_ADDR\_R}{I2C\_ADDR\_R}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+A\+D\+D\+R\+\_\+R(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~(addr$\vert$0b00000001)}
+
+
+
+Definition at line 16 of file z\+I2\+C.\+h.
+
+\mbox{\Hypertarget{z_i2_c_8h_ad1b09871b6103a380325b342dcdee270}\label{z_i2_c_8h_ad1b09871b6103a380325b342dcdee270}} 
+\index{zI2C.h@{zI2C.h}!I2C\_ADDR\_W@{I2C\_ADDR\_W}}
+\index{I2C\_ADDR\_W@{I2C\_ADDR\_W}!zI2C.h@{zI2C.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_ADDR\_W}{I2C\_ADDR\_W}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+A\+D\+D\+R\+\_\+W(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~(addr\&0b11111110)}
+
+
+
+Definition at line 17 of file z\+I2\+C.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{z_i2_c_8h_a0fa0e911a9e32593da0a166aea357fc2}\label{z_i2_c_8h_a0fa0e911a9e32593da0a166aea357fc2}} 
+\index{zI2C.h@{zI2C.h}!I2C\_burst\_read@{I2C\_burst\_read}}
+\index{I2C\_burst\_read@{I2C\_burst\_read}!zI2C.h@{zI2C.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_burst\_read()}{I2C\_burst\_read()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def I2\+C\+\_\+burst\+\_\+read (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{i2c\+\_\+addr,  }\item[{uint8\+\_\+t}]{start\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{pvalue,  }\item[{uint16\+\_\+t}]{size,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file z\+I2\+C.\+c.
+
+\mbox{\Hypertarget{z_i2_c_8h_a6cad7b97b577c75964c4b16fad82ba70}\label{z_i2_c_8h_a6cad7b97b577c75964c4b16fad82ba70}} 
+\index{zI2C.h@{zI2C.h}!I2C\_read\_register@{I2C\_read\_register}}
+\index{I2C\_read\_register@{I2C\_read\_register}!zI2C.h@{zI2C.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_read\_register()}{I2C\_read\_register()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def I2\+C\+\_\+read\+\_\+register (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{i2c\+\_\+addr,  }\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{pvalue,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file z\+I2\+C.\+c.
+
+\mbox{\Hypertarget{z_i2_c_8h_a88d3f564e1be0c504397fc7f6d1a9f76}\label{z_i2_c_8h_a88d3f564e1be0c504397fc7f6d1a9f76}} 
+\index{zI2C.h@{zI2C.h}!I2C\_write\_register@{I2C\_write\_register}}
+\index{I2C\_write\_register@{I2C\_write\_register}!zI2C.h@{zI2C.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_write\_register()}{I2C\_write\_register()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def I2\+C\+\_\+write\+\_\+register (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{i2c\+\_\+addr,  }\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t}]{value,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file z\+I2\+C.\+c.
+

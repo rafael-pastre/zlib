@@ -1,0 +1,120 @@
+\hypertarget{zstrmultiset_8h}{}\doxysection{data\+\_\+structures/string\+\_\+multiset/zstrmultiset.h File Reference}
+\label{zstrmultiset_8h}\index{data\_structures/string\_multiset/zstrmultiset.h@{data\_structures/string\_multiset/zstrmultiset.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__str__multiset__node}{\+\_\+str\+\_\+multiset\+\_\+node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{zstrmultiset_8h_aac60940d4a4f4025524192c9e7adb1cb}{S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__str__multiset__node}{\+\_\+str\+\_\+multiset\+\_\+node}} \mbox{\hyperlink{zstrmultiset_8h_a6b918d24e393b8d2c2e54bc9ef31b843}{Str\+Multi\+Set\+Node}}
+\item 
+typedef \mbox{\hyperlink{zstrmultiset_8h_a6b918d24e393b8d2c2e54bc9ef31b843}{Str\+Multi\+Set\+Node}} $\ast$ \mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$ \mbox{\hyperlink{zstrmultiset_8h_a24b3afe37280f85daf106f67d5f9a6e2}{str\+\_\+multiset\+\_\+create}} ()
+\item 
+int \mbox{\hyperlink{zstrmultiset_8h_a03bef34756a9cc23271e89b3471b9b23}{str\+\_\+multiset\+\_\+count}} (\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$str\+\_\+multiset)
+\item 
+int \mbox{\hyperlink{zstrmultiset_8h_a04aaadb650064b4b7ec2af708580783b}{str\+\_\+multiset\+\_\+insert}} (\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$str\+\_\+multiset, const char $\ast$str)
+\item 
+int \mbox{\hyperlink{zstrmultiset_8h_a8f4243dc2119a48e9e8d9dabb716313b}{str\+\_\+multiset\+\_\+remove}} (\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$str\+\_\+multiset, const char $\ast$str)
+\item 
+void \mbox{\hyperlink{zstrmultiset_8h_a885b72cf3336289ea399bf6ebc0f7118}{print\+\_\+str\+\_\+multiset}} (\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$str\+\_\+multiset)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{zstrmultiset_8h_aac60940d4a4f4025524192c9e7adb1cb}\label{zstrmultiset_8h_aac60940d4a4f4025524192c9e7adb1cb}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!STR\_MAX\_LEN@{STR\_MAX\_LEN}}
+\index{STR\_MAX\_LEN@{STR\_MAX\_LEN}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{STR\_MAX\_LEN}{STR\_MAX\_LEN}}
+{\footnotesize\ttfamily \#define S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+EN~100}
+
+
+
+Definition at line 16 of file zstrmultiset.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}\label{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!StrMultiSet@{StrMultiSet}}
+\index{StrMultiSet@{StrMultiSet}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{StrMultiSet}{StrMultiSet}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{zstrmultiset_8h_a6b918d24e393b8d2c2e54bc9ef31b843}{Str\+Multi\+Set\+Node}}$\ast$ \mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}}}
+
+
+
+Definition at line 26 of file zstrmultiset.\+h.
+
+\mbox{\Hypertarget{zstrmultiset_8h_a6b918d24e393b8d2c2e54bc9ef31b843}\label{zstrmultiset_8h_a6b918d24e393b8d2c2e54bc9ef31b843}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!StrMultiSetNode@{StrMultiSetNode}}
+\index{StrMultiSetNode@{StrMultiSetNode}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{StrMultiSetNode}{StrMultiSetNode}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__str__multiset__node}{\+\_\+str\+\_\+multiset\+\_\+node}} \mbox{\hyperlink{zstrmultiset_8h_a6b918d24e393b8d2c2e54bc9ef31b843}{Str\+Multi\+Set\+Node}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{zstrmultiset_8h_a885b72cf3336289ea399bf6ebc0f7118}\label{zstrmultiset_8h_a885b72cf3336289ea399bf6ebc0f7118}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!print\_str\_multiset@{print\_str\_multiset}}
+\index{print\_str\_multiset@{print\_str\_multiset}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{print\_str\_multiset()}{print\_str\_multiset()}}
+{\footnotesize\ttfamily void print\+\_\+str\+\_\+multiset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$}]{str\+\_\+multiset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file zstrmultiset.\+c.
+
+\mbox{\Hypertarget{zstrmultiset_8h_a03bef34756a9cc23271e89b3471b9b23}\label{zstrmultiset_8h_a03bef34756a9cc23271e89b3471b9b23}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!str\_multiset\_count@{str\_multiset\_count}}
+\index{str\_multiset\_count@{str\_multiset\_count}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{str\_multiset\_count()}{str\_multiset\_count()}}
+{\footnotesize\ttfamily int str\+\_\+multiset\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$}]{str\+\_\+multiset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file zstrmultiset.\+c.
+
+\mbox{\Hypertarget{zstrmultiset_8h_a24b3afe37280f85daf106f67d5f9a6e2}\label{zstrmultiset_8h_a24b3afe37280f85daf106f67d5f9a6e2}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!str\_multiset\_create@{str\_multiset\_create}}
+\index{str\_multiset\_create@{str\_multiset\_create}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{str\_multiset\_create()}{str\_multiset\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}}$\ast$ str\+\_\+multiset\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file zstrmultiset.\+c.
+
+\mbox{\Hypertarget{zstrmultiset_8h_a04aaadb650064b4b7ec2af708580783b}\label{zstrmultiset_8h_a04aaadb650064b4b7ec2af708580783b}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!str\_multiset\_insert@{str\_multiset\_insert}}
+\index{str\_multiset\_insert@{str\_multiset\_insert}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{str\_multiset\_insert()}{str\_multiset\_insert()}}
+{\footnotesize\ttfamily int str\+\_\+multiset\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$}]{str\+\_\+multiset,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file zstrmultiset.\+c.
+
+\mbox{\Hypertarget{zstrmultiset_8h_a8f4243dc2119a48e9e8d9dabb716313b}\label{zstrmultiset_8h_a8f4243dc2119a48e9e8d9dabb716313b}} 
+\index{zstrmultiset.h@{zstrmultiset.h}!str\_multiset\_remove@{str\_multiset\_remove}}
+\index{str\_multiset\_remove@{str\_multiset\_remove}!zstrmultiset.h@{zstrmultiset.h}}
+\doxysubsubsection{\texorpdfstring{str\_multiset\_remove()}{str\_multiset\_remove()}}
+{\footnotesize\ttfamily int str\+\_\+multiset\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{zstrmultiset_8h_a5c26b7fbfae3edbb0350e2789d0e0dfd}{Str\+Multi\+Set}} $\ast$}]{str\+\_\+multiset,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file zstrmultiset.\+c.
+

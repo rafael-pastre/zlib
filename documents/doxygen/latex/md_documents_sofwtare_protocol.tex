@@ -1,0 +1,19 @@
+\hypertarget{md_documents_sofwtare_protocol_autotoc_md6}{}\doxysection{General principles}\label{md_documents_sofwtare_protocol_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Modularization
+\item Reusability
+\item Code documentation
+\item Organization
+\end{DoxyItemize}\hypertarget{md_documents_sofwtare_protocol_autotoc_md7}{}\doxysection{Topics}\label{md_documents_sofwtare_protocol_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Low-\/level programming must be done with fixed size data as defined in $<$inttypes.\+h$>$
+\end{DoxyItemize}\hypertarget{md_documents_sofwtare_protocol_autotoc_md8}{}\doxysection{Library for sensors}\label{md_documents_sofwtare_protocol_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Sensors must be represented by a struct in witch it\textquotesingle{}s desirable data can be acessed directly.
+\item Sensors must be handled as a pointer to the structure.
+\item Function\textquotesingle{}s return must be used for error handling.
+\item Functions must have the pointer(s) to the sensor(s) they are manipulating as the first argument(s) 
+\end{DoxyItemize}

@@ -1,0 +1,159 @@
+\hypertarget{_b_m_p280_8c}{}\doxysection{stm32/\+B\+M\+P280.c File Reference}
+\label{_b_m_p280_8c}\index{stm32/BMP280.c@{stm32/BMP280.c}}
+{\ttfamily \#include \char`\"{}B\+M\+P280.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8c_af0d619f7b623a254b87af28d1a0c3b25}{R\+E\+A\+D\+\_\+\+R\+EG}}(i2c\+\_\+bus,  reg\+\_\+addr,  pvalue)~\mbox{\hyperlink{z_i2_c_8h_a6cad7b97b577c75964c4b16fad82ba70}{I2\+C\+\_\+read\+\_\+register}}(i2c\+\_\+bus, sensor-\/$>$i2c\+\_\+addr, reg\+\_\+addr, pvalue, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8c_a835c6f31a10dfcd05d62de90c3d41f6d}{B\+U\+R\+S\+T\+\_\+\+R\+E\+AD}}(i2c\+\_\+bus,  start\+\_\+addr,  pvalue,  size)~\mbox{\hyperlink{z_i2_c_8h_a0fa0e911a9e32593da0a166aea357fc2}{I2\+C\+\_\+burst\+\_\+read}}(i2c\+\_\+bus, sensor-\/$>$i2c\+\_\+addr, start\+\_\+addr, pvalue, size, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\item 
+\#define \mbox{\hyperlink{_b_m_p280_8c_a981b2b8545d627475bfc0a846a3dad5f}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}(i2c\+\_\+bus,  reg\+\_\+addr,  value)~\mbox{\hyperlink{z_i2_c_8h_a88d3f564e1be0c504397fc7f6d1a9f76}{I2\+C\+\_\+write\+\_\+register}}(i2c\+\_\+bus, sensor-\/$>$i2c\+\_\+addr, reg\+\_\+addr, value, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_a329d6d3649ef8d33476a3da29d449c79}{B\+M\+P280\+\_\+init}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, I2\+C\+\_\+\+Handle\+Type\+Def i2c\+\_\+bus, uint8\+\_\+t sensor\+\_\+version, uint8\+\_\+t sdo)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_a9ae58e557a60481458b6e79755c89fc4}{B\+M\+P280\+\_\+set\+\_\+power\+\_\+mode}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t mode)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_acc0a85c89f2746f443e9520aa2f536f6}{B\+M\+P280\+\_\+set\+\_\+filter}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t filter)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_a9ff2c7141139c064bbfb90a3780a692d}{B\+M\+P280\+\_\+set\+\_\+standby\+\_\+time}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t stb\+\_\+time)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_a9e8eb62b4e95643a38e9bab48a4ba2d8}{B\+M\+P280\+\_\+set\+\_\+temp\+\_\+osrs}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t osrs)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_acb889787c5f7d3272c58f18a7dfc1cb8}{B\+M\+P280\+\_\+set\+\_\+press\+\_\+osrs}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor, uint8\+\_\+t osrs)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_a05d95278054ea18215262656586fc5eb}{B\+M\+P280\+\_\+read}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_a09f57d7c1e93429c5e97264627d0d68a}{B\+M\+P280\+\_\+compensate\+\_\+temp}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\item 
+H\+A\+L\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{_b_m_p280_8c_ab3fa64bb352a08ae00e29499c46955d7}{B\+M\+P280\+\_\+compensate\+\_\+press}} (\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$sensor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_b_m_p280_8c_a835c6f31a10dfcd05d62de90c3d41f6d}\label{_b_m_p280_8c_a835c6f31a10dfcd05d62de90c3d41f6d}} 
+\index{BMP280.c@{BMP280.c}!BURST\_READ@{BURST\_READ}}
+\index{BURST\_READ@{BURST\_READ}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BURST\_READ}{BURST\_READ}}
+{\footnotesize\ttfamily \#define B\+U\+R\+S\+T\+\_\+\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{start\+\_\+addr,  }\item[{}]{pvalue,  }\item[{}]{size }\end{DoxyParamCaption})~\mbox{\hyperlink{z_i2_c_8h_a0fa0e911a9e32593da0a166aea357fc2}{I2\+C\+\_\+burst\+\_\+read}}(i2c\+\_\+bus, sensor-\/$>$i2c\+\_\+addr, start\+\_\+addr, pvalue, size, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}})}
+
+
+
+Definition at line 14 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_af0d619f7b623a254b87af28d1a0c3b25}\label{_b_m_p280_8c_af0d619f7b623a254b87af28d1a0c3b25}} 
+\index{BMP280.c@{BMP280.c}!READ\_REG@{READ\_REG}}
+\index{READ\_REG@{READ\_REG}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{READ\_REG}{READ\_REG}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{reg\+\_\+addr,  }\item[{}]{pvalue }\end{DoxyParamCaption})~\mbox{\hyperlink{z_i2_c_8h_a6cad7b97b577c75964c4b16fad82ba70}{I2\+C\+\_\+read\+\_\+register}}(i2c\+\_\+bus, sensor-\/$>$i2c\+\_\+addr, reg\+\_\+addr, pvalue, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}})}
+
+
+
+Definition at line 11 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a981b2b8545d627475bfc0a846a3dad5f}\label{_b_m_p280_8c_a981b2b8545d627475bfc0a846a3dad5f}} 
+\index{BMP280.c@{BMP280.c}!WRITE\_REG@{WRITE\_REG}}
+\index{WRITE\_REG@{WRITE\_REG}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{WRITE\_REG}{WRITE\_REG}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{i2c\+\_\+bus,  }\item[{}]{reg\+\_\+addr,  }\item[{}]{value }\end{DoxyParamCaption})~\mbox{\hyperlink{z_i2_c_8h_a88d3f564e1be0c504397fc7f6d1a9f76}{I2\+C\+\_\+write\+\_\+register}}(i2c\+\_\+bus, sensor-\/$>$i2c\+\_\+addr, reg\+\_\+addr, value, \mbox{\hyperlink{_b_m_p280_8h_a09f300744adaa257738e1a69dcbb67d1}{B\+M\+P280\+\_\+\+T\+I\+M\+E\+O\+UT}})}
+
+
+
+Definition at line 17 of file B\+M\+P280.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_b_m_p280_8c_ab3fa64bb352a08ae00e29499c46955d7}\label{_b_m_p280_8c_ab3fa64bb352a08ae00e29499c46955d7}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_compensate\_press@{BMP280\_compensate\_press}}
+\index{BMP280\_compensate\_press@{BMP280\_compensate\_press}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_compensate\_press()}{BMP280\_compensate\_press()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+compensate\+\_\+press (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a09f57d7c1e93429c5e97264627d0d68a}\label{_b_m_p280_8c_a09f57d7c1e93429c5e97264627d0d68a}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_compensate\_temp@{BMP280\_compensate\_temp}}
+\index{BMP280\_compensate\_temp@{BMP280\_compensate\_temp}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_compensate\_temp()}{BMP280\_compensate\_temp()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+compensate\+\_\+temp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 320 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a329d6d3649ef8d33476a3da29d449c79}\label{_b_m_p280_8c_a329d6d3649ef8d33476a3da29d449c79}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_init@{BMP280\_init}}
+\index{BMP280\_init@{BMP280\_init}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_init()}{BMP280\_init()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{sensor\+\_\+version,  }\item[{uint8\+\_\+t}]{sdo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a05d95278054ea18215262656586fc5eb}\label{_b_m_p280_8c_a05d95278054ea18215262656586fc5eb}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_read@{BMP280\_read}}
+\index{BMP280\_read@{BMP280\_read}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_read()}{BMP280\_read()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 283 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_acc0a85c89f2746f443e9520aa2f536f6}\label{_b_m_p280_8c_acc0a85c89f2746f443e9520aa2f536f6}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_set\_filter@{BMP280\_set\_filter}}
+\index{BMP280\_set\_filter@{BMP280\_set\_filter}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_filter()}{BMP280\_set\_filter()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{filter }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a9ae58e557a60481458b6e79755c89fc4}\label{_b_m_p280_8c_a9ae58e557a60481458b6e79755c89fc4}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_set\_power\_mode@{BMP280\_set\_power\_mode}}
+\index{BMP280\_set\_power\_mode@{BMP280\_set\_power\_mode}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_power\_mode()}{BMP280\_set\_power\_mode()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+power\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_acb889787c5f7d3272c58f18a7dfc1cb8}\label{_b_m_p280_8c_acb889787c5f7d3272c58f18a7dfc1cb8}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_set\_press\_osrs@{BMP280\_set\_press\_osrs}}
+\index{BMP280\_set\_press\_osrs@{BMP280\_set\_press\_osrs}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_press\_osrs()}{BMP280\_set\_press\_osrs()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+press\+\_\+osrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{osrs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a9ff2c7141139c064bbfb90a3780a692d}\label{_b_m_p280_8c_a9ff2c7141139c064bbfb90a3780a692d}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_set\_standby\_time@{BMP280\_set\_standby\_time}}
+\index{BMP280\_set\_standby\_time@{BMP280\_set\_standby\_time}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_standby\_time()}{BMP280\_set\_standby\_time()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+standby\+\_\+time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{stb\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file B\+M\+P280.\+c.
+
+\mbox{\Hypertarget{_b_m_p280_8c_a9e8eb62b4e95643a38e9bab48a4ba2d8}\label{_b_m_p280_8c_a9e8eb62b4e95643a38e9bab48a4ba2d8}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_set\_temp\_osrs@{BMP280\_set\_temp\_osrs}}
+\index{BMP280\_set\_temp\_osrs@{BMP280\_set\_temp\_osrs}!BMP280.c@{BMP280.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_set\_temp\_osrs()}{BMP280\_set\_temp\_osrs()}}
+{\footnotesize\ttfamily H\+A\+L\+\_\+\+Status\+Type\+Def B\+M\+P280\+\_\+set\+\_\+temp\+\_\+osrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_af926b9686df1ca8ed7b8d18d17642d70}{B\+M\+P280}} $\ast$}]{sensor,  }\item[{uint8\+\_\+t}]{osrs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file B\+M\+P280.\+c.
+
