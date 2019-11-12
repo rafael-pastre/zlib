@@ -8,6 +8,7 @@
 
 ## Topics
 * Low-level programming must be done with fixed size data as defined in <inttypes.h>
+* All variables must be declared and preferably initialized in the beggining of the function.
 
 ## Library for sensors
 * Sensors must be represented by a struct in witch it's desirable data can be acessed directly.
