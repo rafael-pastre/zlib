@@ -12,6 +12,7 @@ This folder contains utility programs that can help software development, such a
 * Random data generator
 * Registry code generator
 * Log generator
+* Tree diagram generator
 
 ### Source Code
 This folder contais the source code of the library.
@@ -21,6 +22,8 @@ This folder contais the source code of the library.
 * Heap
 * Graph
 * Matrix
+* Binary tree
+* Generic tree
 
 #### Algorithms
 * Linear system solver
