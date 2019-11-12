@@ -16,7 +16,8 @@ This folder contains utility programs that can help software development, such a
 
 ### Source Code
 This folder contais the source code of the library.
-#### Data structures
+#### Generic
+##### Data structures
 * Linked list
 * Stack
 * Heap
@@ -25,14 +26,12 @@ This folder contais the source code of the library.
 * Binary tree
 * Generic tree
 
-#### Algorithms
+##### Algorithms
 * Linear system solver
 * Generic Parser
 * Statistical filters
   * Kalman filter
 * DFT
 
-## Contents
+#### Platform specific
 * Sensors
-* Parsers
-* Linear System Solver
