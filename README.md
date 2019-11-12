@@ -9,6 +9,7 @@ This folder contains utility programs that can help software development, such a
 * File comparator
 * Folder comparator
 * Automatic indentator
+* Random data generator
 * Registry code generator
 * Log generator
 
