@@ -3,6 +3,8 @@
 ## General principles
 * Modularization
 * Reusability
+* Code documentation
+* Organization
 
 ## Library for sensors
 * Sensors must be represented by a struct in witch it's desirable data can be acessed directly.
