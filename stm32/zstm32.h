@@ -9,6 +9,7 @@
 #ifndef LIB_ZENITH_STM32_GENERICS
 #define LIB_ZENITH_STM32_GENERICS
 
+#include "zgenerics.h"
 #include "stm32l4xx_hal.h"
 
 #define RETURN_ON_ERROR(status);\
