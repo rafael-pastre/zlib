@@ -6,8 +6,8 @@
  *	Criado em: 20 set 2019
  */
  
-#ifndef LIB_ZENITH_GENERICS
-#define LIB_ZENITH_GENERICS
+#ifndef LIB_ZENITH_STM32_GENERICS
+#define LIB_ZENITH_STM32_GENERICS
 
 #include "stm32l4xx_hal.h"
 
@@ -16,4 +16,4 @@
 		return status;\
 	}
 
-#endif//LIB_ZENITH_GENERICS
+#endif//LIB_ZENITH_STM32_GENERICS
