@@ -18,6 +18,7 @@
 #define IS_MINUSCULE(c) ('a' <= c && c <='z')
 #define IS_ASCII_LETTER(c) (IS_MAIUSCULE(c) || IS_MINUSCULE(c))
 #define IS_ASCII_NUMBER(c) ('0' <= c && c <= '9')
+#define PP_CONCAT(x,y) x ## y
 
 /* Functions */
 void swap(void* pa, void* pb, size_t s);	// Swaps elements pointed by "pa" and "pb". The elements must have "s" bytes.
