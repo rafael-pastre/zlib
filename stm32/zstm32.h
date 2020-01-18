@@ -17,4 +17,13 @@
 		return status;\
 	}
 
+#define SET_PIN(pin_label);\
+	HAL_GPIO_WritePin(PP_CONCAT(pin_label, _GPIO_Port), PP_CONCAT(pin_label, _Pin), GPIO_PIN_SET);
+
+#define RESET_PIN(pin_label);\
+	HAL_GPIO_WritePin(PP_CONCAT(pin_label, _GPIO_Port), PP_CONCAT(pin_label, _Pin), GPIO_PIN_RESET);
+
+#define TOGGLE_PIN(pin_label);\
+	HAL_GPIO_TogglePin(PP_CONCAT(pin_label, _GPIO_Port), PP_CONCAT(pin_label, _Pin));
+
 #endif//LIB_ZENITH_STM32_GENERICS
