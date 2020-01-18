@@ -19,8 +19,11 @@
 #define IS_ASCII_LETTER(c) (IS_MAIUSCULE(c) || IS_MINUSCULE(c))
 #define IS_ASCII_NUMBER(c) ('0' <= c && c <= '9')
 
+//PP_CONCAT concatenates x and y, PP_CONCAT_NX is a helper for macro-expansion and must NOT be used
 #define PP_CONCAT_NX(x,y) x##y
 #define PP_CONCAT(x,y) PP_CONCAT_NX(x,y)
+
+//PP_STRINGIZE turns x into "x", PP_STRINGIZE_NX is a helper for macro-expansion and must NOT be used
 #define PP_STRINGIZE_NX(x) #x
 #define PP_STRINGIZE(x) PP_STRINGIZE_NX(x)
 
